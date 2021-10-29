@@ -34,6 +34,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/pi/linux_network/src"/>
 					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>
@@ -54,6 +55,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/pi/linux_network/src"/>
 					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>

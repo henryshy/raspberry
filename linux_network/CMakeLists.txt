@@ -4,3 +4,5 @@ project(linux_network C)
 set(CMAKE_C_STANDARD 99)
 
 add_executable(linux_network main.c)
+file(GLOB_RECURSE SOURCES "src/*.*")
+include_directories(src)

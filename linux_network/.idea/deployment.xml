@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="rasp1 (4ba3d3b6-9ef4-4b1d-afc4-afbebbee8849)" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="raspberry (dea80244-f4dd-4d14-9673-e26be5f0f2ab)">
+      <paths name="rasp1 (4ba3d3b6-9ef4-4b1d-afc4-afbebbee8849)">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/pi/linux_network" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/linux_network" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-raspberry" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-raspberry" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-rasp" />
           </excludedPaths>
         </serverdata>
       </paths>
+      <paths name="rasp2 (004c8414-1ae8-4be5-a987-2e32e6976a93)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="raspberry">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/linux_network" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

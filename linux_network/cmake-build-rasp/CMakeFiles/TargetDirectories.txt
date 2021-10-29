@@ -1,0 +1,3 @@
+/home/pi/linux_network/cmake-build-rasp/CMakeFiles/rebuild_cache.dir
+/home/pi/linux_network/cmake-build-rasp/CMakeFiles/linux_network.dir
+/home/pi/linux_network/cmake-build-rasp/CMakeFiles/edit_cache.dir

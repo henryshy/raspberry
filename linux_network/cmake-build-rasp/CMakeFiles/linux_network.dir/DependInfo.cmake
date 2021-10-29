@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pi/linux_network/main.c" "/home/pi/linux_network/cmake-build-debug/CMakeFiles/linux_network.dir/main.c.o"
+  "/home/pi/linux_network/main.c" "/home/pi/linux_network/cmake-build-rasp/CMakeFiles/linux_network.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
