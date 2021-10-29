@@ -1,0 +1,3 @@
+/home/pi/linux_network/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pi/linux_network/cmake-build-debug/CMakeFiles/linux_network.dir
+/home/pi/linux_network/cmake-build-debug/CMakeFiles/edit_cache.dir

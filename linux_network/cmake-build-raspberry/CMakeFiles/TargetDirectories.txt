@@ -1,0 +1,3 @@
+/home/pi/linux_network/cmake-build-raspberry/CMakeFiles/rebuild_cache.dir
+/home/pi/linux_network/cmake-build-raspberry/CMakeFiles/linux_network.dir
+/home/pi/linux_network/cmake-build-raspberry/CMakeFiles/edit_cache.dir
