@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/main.dir/src/main.o  -o ../bin/main  -Wl,-rpath,/home/pi/tmp/tmp.PvaZ1lt9Vm/testFunc/lib ../testFunc/lib/libpaho-embed-mqtt3c.so 

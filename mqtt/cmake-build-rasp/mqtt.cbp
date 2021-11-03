@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mqtt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\paho_mqtt\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/pi/Desktop/cmake-build-rasp"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/pi/Desktop/cmake-build-rasp"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mqtt">
+				<Option output="/home/pi/Desktop/cmake-build-rasp/mqtt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pi/Desktop/cmake-build-rasp"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 mqtt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mqtt/fast">
+				<Option output="/home/pi/Desktop/cmake-build-rasp/mqtt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pi/Desktop/cmake-build-rasp"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 mqtt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/pi/Desktop/cmake-build-rasp"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PAHO_MQTT">
+				<Option output="/home/pi/Desktop/cmake-build-rasp/paho_mqtt/libPAHO_MQTT.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pi/Desktop/cmake-build-rasp/paho_mqtt"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 PAHO_MQTT"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PAHO_MQTT/fast">
+				<Option output="/home/pi/Desktop/cmake-build-rasp/paho_mqtt/libPAHO_MQTT.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pi/Desktop/cmake-build-rasp/paho_mqtt"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>
+					<Add directory="/usr/include/arm-linux-gnueabihf"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 PAHO_MQTT/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/cmake-build-rasp/paho_mqtt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/pi/Desktop/main.c">
+			<Option target="mqtt"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTClient.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTClient.h">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTConnectClient.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTConnectServer.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTDeserializePublish.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTFormat.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTFormat.h">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTLinux.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTLinux.h">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTPacket.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTPacket.h">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTSerializePublish.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTSubscribeClient.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTSubscribeServer.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTUnsubscribeClient.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/MQTTUnsubscribeServer.c">
+			<Option target="PAHO_MQTT"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/paho_mqtt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\paho_mqtt\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

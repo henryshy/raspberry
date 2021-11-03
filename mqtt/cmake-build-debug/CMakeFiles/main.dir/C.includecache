@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/tmp/tmp.PvaZ1lt9Vm/src/main.c
+stdio.h
+-
+MQTTAsync.h
+/home/pi/tmp/tmp.PvaZ1lt9Vm/src/MQTTAsync.h
+

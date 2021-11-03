@@ -1,0 +1,6 @@
+/home/pi/Desktop/cmake-build-rasp/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/cmake-build-rasp/CMakeFiles/mqtt.dir
+/home/pi/Desktop/cmake-build-rasp/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/cmake-build-rasp/paho_mqtt/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/cmake-build-rasp/paho_mqtt/CMakeFiles/PAHO_MQTT.dir
+/home/pi/Desktop/cmake-build-rasp/paho_mqtt/CMakeFiles/edit_cache.dir

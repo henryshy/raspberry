@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libPAHO_MQTT.a"
+)
