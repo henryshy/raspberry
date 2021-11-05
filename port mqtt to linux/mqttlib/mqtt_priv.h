@@ -37,8 +37,8 @@
 #ifndef LWIP_HDR_APPS_MQTT_PRIV_H
 #define LWIP_HDR_APPS_MQTT_PRIV_H
 
-#include "lwip/apps/mqtt.h"
-#include "lwip/altcp.h"
+#include "mqtt.h"
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -80,6 +80,8 @@ struct mqtt_client_s
   /** Connection state */
   u8_t conn_state;
   struct altcp_pcb *conn;
+
+
   /** Connection callback */
   void *connect_arg;
   mqtt_connection_cb_t connect_cb;
