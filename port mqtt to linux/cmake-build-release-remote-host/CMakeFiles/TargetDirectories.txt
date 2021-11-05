@@ -1,0 +1,3 @@
+/home/pi/Desktop/port/cmake-build-release-remote-host/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/port/cmake-build-release-remote-host/CMakeFiles/mqtt.dir
+/home/pi/Desktop/port/cmake-build-release-remote-host/CMakeFiles/edit_cache.dir

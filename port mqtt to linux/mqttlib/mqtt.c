@@ -1187,8 +1187,13 @@ mqtt_set_inpub_callback(mqtt_client_t *client, mqtt_incoming_publish_cb_t pub_cb
 mqtt_client_t *
 mqtt_client_new(void)
 {
+#if USE_LWIP
     LWIP_ASSERT_CORE_LOCKED();
     return (mqtt_client_t *)mem_calloc(1, sizeof(mqtt_client_t));
+#endif
+#if USE_SOCKET
+    return (mqtt_client_t *)malloc(sizeof(mqtt_client_t));
+#endif
 }
 
 /**
@@ -1199,7 +1204,12 @@ mqtt_client_new(void)
 void
 mqtt_client_free(mqtt_client_t *client)
 {
+#if USE_LWIP
     mem_free(client);
+#endif
+#if USE_SOCKET
+    free(client);
+#endif
 }
 
 /**

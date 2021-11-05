@@ -36,13 +36,16 @@ typedef void (*mqtt_incoming_data_cb_t)(void *arg, const u8_t *data, u16_t len, 
 typedef void (*mqtt_incoming_publish_cb_t)(void *arg, const char *topic, u32_t tot_len);
 typedef void (*mqtt_request_cb_t)(void *arg, err_t err);
 typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
+
 #if USE_SOCKET
 typedef struct altcp_pcb int;
+#define LWIP_ARRAYSIZE(x) (sizeof(x)/sizeof((x)[0]))
 #endif
+#include <stdlib.h>
 #if USE_SOCKET
 #include <arpa/inet.h>
 #include <netinet/in.h>
-#include <stdlib.h>
+
 #include <sys/socket.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -50,12 +53,13 @@ typedef struct altcp_pcb int;
 #include <netinet/tcp.h>
 #include <sys/param.h>
 #include <netdb.h>
+
 #endif
 
 #include "mqtt_opts.h"
 #include "mqtt_priv.h"
 
-#define LWIP_ARRAYSIZE(x) (sizeof(x)/sizeof((x)[0]))
+
 #define mqtt_subscribe(client, topic, qos, cb, arg) mqtt_sub_unsub(client, topic, qos, cb, arg, 1)
 #define mqtt_unsubscribe(client, topic, cb, arg) mqtt_sub_unsub(client, topic, 0, cb, arg, 0)
 
