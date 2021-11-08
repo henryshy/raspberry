@@ -37,6 +37,10 @@
 #ifndef LWIP_HDR_APPS_MQTT_PRIV_H
 #define LWIP_HDR_APPS_MQTT_PRIV_H
 
+#if USE_SOCKET
+#include "network.h"
+#endif
+
 #include "mqtt.h"
 
 

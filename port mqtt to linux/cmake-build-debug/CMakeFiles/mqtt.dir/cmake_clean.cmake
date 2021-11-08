@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mqtt.dir/mqtt_client.c.o"
-  "CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o"
-  "mqtt"
+  "CMakeFiles/mqtt.dir/mqtt_client.c.obj"
+  "CMakeFiles/mqtt.dir/mqttlib/mqtt.c.obj"
+  "CMakeFiles/mqtt.dir/mqttlib/network.c.obj"
+  "libmqtt.dll.a"
+  "mqtt.exe"
+  "mqtt.exe.manifest"
   "mqtt.pdb"
 )
 

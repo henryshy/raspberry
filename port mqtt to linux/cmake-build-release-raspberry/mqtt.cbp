@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/pi/Desktop/port/cmake-build-release-raspberry"/>
+				<Option working_dir="/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/pi/Desktop/port/cmake-build-release-raspberry"/>
+				<Option working_dir="/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mqtt">
-				<Option output="/home/pi/Desktop/port/cmake-build-release-raspberry/mqtt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pi/Desktop/port/cmake-build-release-raspberry"/>
+				<Option output="/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/mqtt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/pi/Desktop/port/mqttlib"/>
+					<Add directory="/home/pi/tmp/port mqtt to linux/mqttlib"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
 					<Add directory="/usr/include/c++/8/backward"/>
@@ -45,20 +45,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 mqtt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 mqtt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mqtt/fast">
-				<Option output="/home/pi/Desktop/port/cmake-build-release-raspberry/mqtt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pi/Desktop/port/cmake-build-release-raspberry"/>
+				<Option output="/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/mqtt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/pi/Desktop/port/mqttlib"/>
+					<Add directory="/home/pi/tmp/port mqtt to linux/mqttlib"/>
 					<Add directory="/usr/include/c++/8"/>
 					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
 					<Add directory="/usr/include/c++/8/backward"/>
@@ -69,33 +69,39 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 mqtt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 mqtt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/pi/Desktop/port/cmake-build-release-raspberry"/>
+				<Option working_dir="/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/port/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/tmp/port\ mqtt\ to\ linux/cmake-build-release-raspberry/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pi/Desktop/port/mqtt_client.c">
+		<Unit filename="/home/pi/tmp/port mqtt to linux/mqtt_client.c">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/port/mqttlib/mqtt.c">
+		<Unit filename="/home/pi/tmp/port mqtt to linux/mqttlib/mqtt.c">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/port/mqttlib/mqtt.h">
+		<Unit filename="/home/pi/tmp/port mqtt to linux/mqttlib/mqtt.h">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/port/CMakeLists.txt">
+		<Unit filename="/home/pi/tmp/port mqtt to linux/mqttlib/network.c">
+			<Option target="mqtt"/>
+		</Unit>
+		<Unit filename="/home/pi/tmp/port mqtt to linux/mqttlib/network.h">
+			<Option target="mqtt"/>
+		</Unit>
+		<Unit filename="/home/pi/tmp/port mqtt to linux/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

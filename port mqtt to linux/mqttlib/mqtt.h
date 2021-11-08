@@ -38,11 +38,8 @@ typedef void (*mqtt_request_cb_t)(void *arg, err_t err);
 typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
 
 #if USE_SOCKET
-typedef struct altcp_pcb int;
 #define LWIP_ARRAYSIZE(x) (sizeof(x)/sizeof((x)[0]))
-#endif
-#include <stdlib.h>
-#if USE_SOCKET
+
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
@@ -55,7 +52,7 @@ typedef struct altcp_pcb int;
 #include <netdb.h>
 
 #endif
-
+#include <stdlib.h>
 #include "mqtt_opts.h"
 #include "mqtt_priv.h"
 

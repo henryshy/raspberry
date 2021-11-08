@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/pi/Desktop/port
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" "/home/pi/tmp/port mqtt to linux"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/pi/Desktop/port/cmake-build-release-raspberry
+-- Build files have been written to: /home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry
