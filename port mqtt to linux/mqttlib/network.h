@@ -17,22 +17,32 @@
 #define DLLImport
 #define DLLExport
 #endif
+typedef void  (*network_err_fn)(void *arg, err_t err);
+typedef err_t (*network_connected_fn)(void *arg, struct altcp_pcb *conn, err_t err);
+
 typedef struct Timer
 {
     struct timeval end_time;
 } Timer;
 typedef  struct network{
-        int sockfd;
-        int (*mqttread) (struct network*,unsigned char*,int,int);
-        int (*mqttwrite) (struct Network*, unsigned char*, int, int);
-    }network;
+    void* arg;
+    int sockfd;
+    ip_addr_t *ipaddr;
+    u16_t port;
+    err_t (*netwrok_close_fn)(struct altcp_pcb *conn);
+    err_t (*network_bind_fn)(struct altcp_pcb *conn, const ip_addr_t *ipaddr, u16_t port);
+    err_t (*network_accept_fn)(void *arg, struct altcp_pcb *new_conn, err_t err);
+    err_t (*network_connected_fn)(void *arg, struct altcp_pcb *conn, err_t err);
+    err_t (*network_poll_fn)(void *arg, struct altcp_pcb *conn);
+     void  (*network_err_fn)(void *arg, err_t err);
+    err_t (*mqttread_fn) (struct network*,unsigned char*,int,int);
+    err_t (*mqttwrite_fn) (struct Network*, unsigned char*, int, int);
+}network;
+
 #define altcp_pcb network
 
 int linux_read(network *, unsigned char*, int, int);
 int linux_write(network *, unsigned char*, int, int);
-DLLExport void NetworkInit(network*);
-DLLExport int NetworkConnect(network*, char*, int);
-DLLExport void NetworkDisconnect(network*);
 
 
 #endif
