@@ -10,6 +10,7 @@
 #include "port_types.h"
 #include "network.h"
 #define TCP_WRITE_FLAG_COPY 0x01
+#define TCP_WRITE_FLAG_MORE 0x02
 #endif
 
 typedef struct mqtt_client_s mqtt_client_t;

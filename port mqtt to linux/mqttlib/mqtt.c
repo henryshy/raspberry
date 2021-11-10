@@ -107,22 +107,16 @@ mqtt_ringbuf_len(struct mqtt_ringbuf_t *rb)
     }
     return (u16_t)len;
 }
-#if USE_LWIP
-/** Return number of bytes free in ring buffer */
-#define mqtt_ringbuf_free(rb) (MQTT_OUTPUT_RINGBUF_SIZE - mqtt_ringbuf_len(rb))
-
-/** Return number of bytes possible to read without wrapping around */
-#define mqtt_ringbuf_linear_read_length(rb) (mqtt_ringbuf_len(rb), (MQTT_OUTPUT_RINGBUF_SIZE - (rb)->get))
-#endif
 #if USE_SOCKET
 #define LWIP_MIN(x , y)  (((x) < (y)) ? (x) : (y))
+#endif
 /** Return number of bytes free in ring buffer */
 #define mqtt_ringbuf_free(rb) (MQTT_OUTPUT_RINGBUF_SIZE - mqtt_ringbuf_len(rb))
 
 /** Return number of bytes possible to read without wrapping around */
 #define mqtt_ringbuf_linear_read_length(rb) LWIP_MIN(mqtt_ringbuf_len(rb), (MQTT_OUTPUT_RINGBUF_SIZE - (rb)->get))
 
-#endif
+
 /**
  * Try send as many bytes as possible from output ring buffer
  * @param rb Output ring buffer
@@ -131,7 +125,7 @@ mqtt_ringbuf_len(struct mqtt_ringbuf_t *rb)
 static void
 mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
 {
-
+#if USE_LWIP
     err_t err;
     u8_t wrap = 0;
     u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
@@ -166,7 +160,23 @@ mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
         printf("mqtt_output_send: Send failed with err %d (\"%s\")\n");
         // LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_output_send: Send failed with err %d (\"%s\")\n", err, lwip_strerr(err)));
     }
+#endif
+#if USE_SOCKET
+    err_t err;
+    u8_t wrap = 0;
+    u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
 
+    if ( ringbuf_lin_len == 0) {
+        return;
+    }
+    wrap = (mqtt_ringbuf_len(rb) > ringbuf_lin_len);
+    if(wrap){
+
+    }
+
+
+
+#endif
 }
 
 
