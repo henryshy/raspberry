@@ -5,9 +5,11 @@
 #define USE_LWIP 0
 #define MQTT_PORT     1883
 #define LOCAL_PORT     1883
-
+#define IP_ADDR "192.168.1.1"
 #if USE_SOCKET
 #include "port_types.h"
+#include "network.h"
+#define TCP_WRITE_FLAG_COPY 0x01
 #endif
 
 typedef struct mqtt_client_s mqtt_client_t;

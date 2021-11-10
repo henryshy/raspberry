@@ -22,8 +22,12 @@
             <mapping deploy="/tmp/tmp.Hbp8jTtr81" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-remote-host" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-rasp2" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-mingw" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-remote-host" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-rasp2" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-mingw" />
           </excludedPaths>
         </serverdata>
       </paths>

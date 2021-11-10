@@ -1,9 +1,27 @@
-
 #include "mqtt.h"
+#if USE_SOCKET
 #include "network.h"
 
-#if USE_SOCKET
 
+void reg_recv_fn(struct altcp_pcb *tpcb,network_recv_fn recv){
+    if(tpcb){
+        tpcb->recv_fn=recv;
+    }
+}
+void reg_sent_fn(struct altcp_pcb *tpcb,network_sent_fn sent){
+    if(tpcb){
+        tpcb->sent_fn=sent;
+    }
+}
+void reg_poll_fn(struct altcp_pcb *tpcb,network_poll_fn poll,u8_t interval){
+    if(tpcb){
+        tpcb->poll_fn=poll;
+        tpcb->pollinterval=interval;
+        if(tpcb->poll_fn){
+            tpcb->poll_fn(tpcb,interval);
+        }
+    }
+}
 err_t network_close(network* n){
     if(n&&n->netwrok_close_fn){
         return n->netwrok_close_fn(n);
@@ -17,7 +35,7 @@ void network_arg(network* n,void* arg){
 }
 void network_err(network* n ,network_err_fn err){
     if(n){
-        n->network_err_fn=err;
+        n->err_fn=err;
     }
 }
 err_t network_bind(network* n, const ip_addr_t *ipaddr, u16_t port){
@@ -32,12 +50,19 @@ err_t network_bind(network* n, const ip_addr_t *ipaddr, u16_t port){
        if(bind(n->sockfd,&client_addr,client_addr_length)==-1){
            printf("client bind fail!\n");
            close(n->sockfd);
+           return ERR_ABRT;
            exit(0);
        }
+       return ERR_OK;
+    }
+    else {
+        printf("no network, bind fail\n");
+        return ERR_ARG;
+        exit(0);
     }
 }
 
-err_t network_concect(network* n, const ip_addr_t *ipaddr, u16_t port, network_connected_fn connected){
+err_t network_connect(network* n, const ip_addr_t *ipaddr, u16_t port, network_connected_fn connected){
     if(n) {
 
         struct sockaddr_in server_addr;
@@ -52,12 +77,15 @@ err_t network_concect(network* n, const ip_addr_t *ipaddr, u16_t port, network_c
         if(connect(n->sockfd,(struct sockaddr*)&server_addr,server_addr_length)<0){
             printf("can not connect to server!\n");
             close(n->sockfd);
+            return ERR_ABRT;
             exit(0);
         }
-        n->network_connected_fn=connected;
+        n->connected_fn=connected;
+        return ERR_OK;
     }
     else{
         printf("no network, bind fail\n");
+        return ERR_ARG;
         exit(0);
     }
 }

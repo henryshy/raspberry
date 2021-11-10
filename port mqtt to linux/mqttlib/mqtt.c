@@ -1,7 +1,7 @@
 
 #include "mqtt.h"
 #include <string.h>
-
+#include "network.h"
 
 /**
  * MQTT client connection states
@@ -131,46 +131,7 @@ mqtt_ringbuf_len(struct mqtt_ringbuf_t *rb)
 static void
 mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
 {
-#if USE_LWIP
-    err_t err;
-    u8_t wrap = 0;
-    u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
-    u16_t send_len = altcp_sndbuf(tpcb);
-    LWIP_ASSERT("mqtt_output_send: tpcb != NULL", tpcb != NULL);
 
-    if (send_len == 0 || ringbuf_lin_len == 0) {
-        return;
-    }
-
-    LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_output_send: tcp_sndbuf: %d bytes, ringbuf_linear_available: %d, get %d, put %d\n",send_len, ringbuf_lin_len, rb->get, rb->put));
-
-    if (send_len > ringbuf_lin_len) {
-        /* Space in TCP output buffer is larger than available in ring buffer linear portion */
-        send_len = ringbuf_lin_len;
-        /* Wrap around if more data in ring buffer after linear portion */
-        wrap = (mqtt_ringbuf_len(rb) > ringbuf_lin_len);
-    }
-    err = altcp_write(tpcb, mqtt_ringbuf_get_ptr(rb), send_len, TCP_WRITE_FLAG_COPY | (wrap ? TCP_WRITE_FLAG_MORE : 0));
-    if ((err == ERR_OK) && wrap) {
-        mqtt_ringbuf_advance_get_idx(rb, send_len);
-        /* Use the lesser one of ring buffer linear length and TCP send buffer size */
-        send_len = LWIP_MIN(altcp_sndbuf(tpcb), mqtt_ringbuf_linear_read_length(rb));
-        err = altcp_write(tpcb, mqtt_ringbuf_get_ptr(rb), send_len, TCP_WRITE_FLAG_COPY);
-    }
-
-    if (err == ERR_OK) {
-        mqtt_ringbuf_advance_get_idx(rb, send_len);
-        /* Flush */
-        altcp_output(tpcb);
-    } else {
-        LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_output_send: Send failed with err %d (\"%s\")\n", err, lwip_strerr(err)));
-    }
-#endif
-#if USE_SOCKET
-//    err_t err;
-//    u8_t wrap = 0;
-//    u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
-//    send((int) &tpcb, rb, ringbuf_lin_len, 0);
     err_t err;
     u8_t wrap = 0;
     u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
@@ -202,9 +163,10 @@ mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
         /* Flush */
         altcp_output(tpcb);
     } else {
-        LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_output_send: Send failed with err %d (\"%s\")\n", err, lwip_strerr(err)));
+        printf("mqtt_output_send: Send failed with err %d (\"%s\")\n");
+       // LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_output_send: Send failed with err %d (\"%s\")\n", err, lwip_strerr(err)));
     }
-#endif
+
 }
 
 
@@ -561,9 +523,7 @@ mqtt_cyclic_timer(void *arg)
         restart_timer = 0;
     }
     if (restart_timer) {
-#if USE_LWIP
         sys_timeout(MQTT_CYCLIC_TIMER_INTERVAL * 1000, mqtt_cyclic_timer, arg);
-#endif
     }
 }
 
@@ -815,6 +775,7 @@ mqtt_parse_incoming(mqtt_client_t *client, struct pbuf *p)
                         mqtt_message_received(client, fixed_hdr_idx, 0, 0);
                         client->msg_idx = 0;
                         fixed_hdr_idx = 0;
+
                     } else {
                         /* Bytes remaining in message (changes remaining length if this is
                            not the first segment of this message) */
@@ -918,10 +879,10 @@ static err_t
 mqtt_tcp_sent_cb(void *arg, struct altcp_pcb *tpcb, u16_t len)
 {
     mqtt_client_t *client = (mqtt_client_t *)arg;
-
+#if USE_LWIP
     LWIP_UNUSED_ARG(tpcb);
     LWIP_UNUSED_ARG(len);
-
+#endif
     if (client->conn_state == MQTT_CONNECTED) {
         struct mqtt_request_t *r;
 
@@ -930,7 +891,9 @@ mqtt_tcp_sent_cb(void *arg, struct altcp_pcb *tpcb, u16_t len)
         client->server_watchdog = 0;
         /* QoS 0 publish has no response from server, so call its callbacks here */
         while ((r = mqtt_take_request(&client->pend_req_queue, 0)) != NULL) {
+#if USE_LWIP
             LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_tcp_sent_cb: Calling QoS 0 publish complete callback\n"));
+#endif
             if (r->cb != NULL) {
                 r->cb(r->arg, ERR_OK);
             }
@@ -951,9 +914,9 @@ static void
 mqtt_tcp_err_cb(void *arg, err_t err)
 {
     mqtt_client_t *client = (mqtt_client_t *)arg;
-    LWIP_UNUSED_ARG(err); /* only used for debug output */
-    LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_tcp_err_cb: TCP error callback: error %d, arg: %p\n", err, arg));
-    LWIP_ASSERT("mqtt_tcp_err_cb: client != NULL", client != NULL);
+   // LWIP_UNUSED_ARG(err); /* only used for debug output */
+  //  LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_tcp_err_cb: TCP error callback: error %d, arg: %p\n", err, arg));
+   // LWIP_ASSERT("mqtt_tcp_err_cb: client != NULL", client != NULL);
     /* Set conn to null before calling close as pcb is already deallocated*/
     client->conn = 0;
     mqtt_close(client, MQTT_CONNECT_DISCONNECTED);
@@ -985,29 +948,6 @@ mqtt_tcp_poll_cb(void *arg, struct altcp_pcb *tpcb)
 static err_t
 mqtt_tcp_connect_cb(void *arg, struct altcp_pcb *tpcb, err_t err)
 {
-#if USE_LWIP
-    mqtt_client_t *client = (mqtt_client_t *)arg;
-    if (err != ERR_OK) {
-        //LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_tcp_connect_cb: TCP connect error %d\n", err));
-        return err;
-    }
-    /* Initiate receiver state */
-    client->msg_idx = 0;
-    /* Setup TCP callbacks */
-    altcp_recv(tpcb, mqtt_tcp_recv_cb);
-    altcp_sent(tpcb, mqtt_tcp_sent_cb);
-    altcp_poll(tpcb, mqtt_tcp_poll_cb, 2);
-    LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_tcp_connect_cb: TCP connection established to server\n"));
-    /* Enter MQTT connect state */
-    client->conn_state = MQTT_CONNECTING;
-    /* Start cyclic timer */
-    sys_timeout(MQTT_CYCLIC_TIMER_INTERVAL * 1000, mqtt_cyclic_timer, client);
-    client->cyclic_tick = 0;
-    /* Start transmission from output queue, connect message is the first one out*/
-    mqtt_output_send(&client->output, client->conn);
-    return ERR_OK;
-#endif
-#if USE_SOCKET
     mqtt_client_t *client = (mqtt_client_t *)arg;
 
     if (err != ERR_OK) {
@@ -1034,7 +974,6 @@ mqtt_tcp_connect_cb(void *arg, struct altcp_pcb *tpcb, err_t err)
     mqtt_output_send(&client->output, client->conn);
 
     return ERR_OK;
-#endif
 }
 
 
@@ -1336,14 +1275,18 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
         return ERR_MEM;
     }
 
-#if LWIP_ALTCP && LWIP_ALTCP_TLS && USE_LWIP
+#if LWIP_ALTCP && LWIP_ALTCP_TLS
   if (client_info->tls_config) {
     client->conn = altcp_tls_new(client_info->tls_config, IP_GET_TYPE(ip_addr));
   } else
 #endif
-#if USE_LWIP
+
   {
+#if USE_LWIP
     client->conn = altcp_tcp_new_ip_type(IP_GET_TYPE(ip_addr));
+#elif USE_SOCKET
+        client->conn= socket(AF_INET,SOCK_STREAM,0);
+#endif
   }
     if (client->conn == NULL) {
         return ERR_MEM;
@@ -1353,9 +1296,9 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     /* Set arg pointer for callbacks */
     altcp_arg(client->conn, client);
     /* Any local address, pick random local port number */
-    err = altcp_bind(client->conn, IP_ADDR_ANY, 0);
+    err = altcp_bind(client->conn, ip_addr, port);
     if (err != ERR_OK) {
-        LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_client_connect: Error binding to local ip/port, %d\n", err));
+        //LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_client_connect: Error binding to local ip/port, %d\n", err));
         goto tcp_fail;
     }
     //LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_client_connect: Connecting to host: %s at port:%"U16_F"\n", ipaddr_ntoa(ip_addr), port));
@@ -1368,51 +1311,8 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     }
     /* Set error callback */
     altcp_err(client->conn, mqtt_tcp_err_cb);
-#endif
-#if USE_SOCKET
-    int client_socket;
-    struct sockaddr_in client_addr;
-    int client_addr_length;
-
-    client_socket= socket(AF_INET,SOCK_STREAM,0);
-    client->conn=&client_socket;
-    if(client_socket){
-        printf("create  client socket failed!\n");
-        goto tcp_fail;
-    }
-    memset(&client_addr,0,sizeof(struct sockaddr_in));
-    client_addr.sin_family=AF_INET;
-    client_addr.sin_port= htons(LOCAL_PORT);
-    client_addr.sin_addr.s_addr= htons(INADDR_ANY);
-    client_addr_length=sizeof(client_addr);
-
-    if(bind(client_socket, &client_addr, client_addr_length)){
-        printf("client bind failed!\n");
-        goto tcp_fail;
-    }
-
-    struct sockaddr_in server_addr;
-    memset(&client_addr,0,sizeof(struct sockaddr_in));
 
 
-    server_addr.sin_family=AF_INET;
-    server_addr.sin_port= htons(port);
-    server_addr.sin_addr.s_addr= ip_addr->addr;
-    socklen_t server_addr_length=sizeof(server_addr);
-
-    if(connect(client_socket,(struct sockaddr*)&server_addr,server_addr_length)<0){
-        printf("can not connect to server!\n");
-        goto tcp_fail;
-    }
-    else{
-        printf("connect success!\n");
-        client->msg_idx=0;
-        client->conn_state=MQTT_CONNECTING;
-        sys_timeout(MQTT_CYCLIC_TIMER_INTERVAL * 1000, mqtt_cyclic_timer, client);
-        client->cyclic_tick=0;
-        mqtt_output_send(&client->output,client->conn);
-    }
-#endif
     client->conn_state = TCP_CONNECTING;
 
     /* Append fixed header */
@@ -1448,7 +1348,7 @@ tcp_fail:
     client->conn = NULL;
     exit(00;)
 #else
-    close(client_socket);
+    close(client->conn);
     exit(0);
 #endif
     return err;
