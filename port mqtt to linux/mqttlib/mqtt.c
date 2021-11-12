@@ -446,7 +446,7 @@ mqtt_output_check_space(struct mqtt_ringbuf_t *rb, u16_t r_length)
 static void
 mqtt_close(mqtt_client_t *client, mqtt_connection_status_t reason)
 {
-#if USE_LWIP
+
     // LWIP_ASSERT("mqtt_close: client != NULL", client != NULL);
 
     /* Bring down TCP connection if not already done */
@@ -456,10 +456,12 @@ mqtt_close(mqtt_client_t *client, mqtt_connection_status_t reason)
         altcp_err(client->conn,  NULL);
         altcp_sent(client->conn, NULL);
         res = altcp_close(client->conn);
+#if USE_LWIP
         if (res != ERR_OK) {
             altcp_abort(client->conn);
             LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_close: Close err=%s\n", lwip_strerr(res)));
         }
+#endif
         client->conn = NULL;
     }
 
@@ -476,10 +478,8 @@ mqtt_close(mqtt_client_t *client, mqtt_connection_status_t reason)
             client->connect_cb(client, client->connect_arg, reason);
         }
     }
-#endif
-#if USE_SOCKET
-    close(&(client->conn));
-#endif
+
+
 }
 
 
@@ -530,6 +530,7 @@ mqtt_cyclic_timer(void *arg)
         }
     } else {
         //LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_cyclic_timer: Timer should not be running in state %d\n", client->conn_state));
+        printf("mqtt_cyclic_timer: Timer should not be running in state %d\n", client->conn_state);
         restart_timer = 0;
     }
     if (restart_timer) {
@@ -929,6 +930,7 @@ mqtt_tcp_err_cb(void *arg, err_t err)
     // LWIP_ASSERT("mqtt_tcp_err_cb: client != NULL", client != NULL);
     /* Set conn to null before calling close as pcb is already deallocated*/
     client->conn = 0;
+    printf("mqtt network err:%d!\n",err);
     mqtt_close(client, MQTT_CONNECT_DISCONNECTED);
 }
 
@@ -1011,6 +1013,7 @@ err_t
 mqtt_publish(mqtt_client_t *client, const char *topic, const void *payload, u16_t payload_length, u8_t qos, u8_t retain,
              mqtt_request_cb_t cb, void *arg)
 {
+
     struct mqtt_request_t *r;
     u16_t pkt_id;
     size_t topic_strlen;
@@ -1174,7 +1177,7 @@ mqtt_client_new(void)
     return (mqtt_client_t *)mem_calloc(1, sizeof(mqtt_client_t));
 #endif
 #if USE_SOCKET
-    return (mqtt_client_t *)malloc(sizeof(mqtt_client_t));
+    return (mqtt_client_t *)calloc(1,sizeof(mqtt_client_t));
 #endif
 }
 
@@ -1295,9 +1298,10 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
 #if USE_LWIP
         client->conn = altcp_tcp_new_ip_type(IP_GET_TYPE(ip_addr));
 #elif USE_SOCKET
-        client->conn= socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
-        if(client->conn){
-
+        client->conn = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
+        if(client->conn<0){
+            printf("network error! can not create socket!\n");
+            goto tcp_fail;
         }
 #endif
     }
@@ -1322,9 +1326,9 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
         //LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_client_connect: Error connecting to remote ip/port, %d\n", err));
         goto tcp_fail;
     }
+
     /* Set error callback */
     altcp_err(client->conn, mqtt_tcp_err_cb);
-
 
     client->conn_state = TCP_CONNECTING;
 
@@ -1353,18 +1357,22 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     if ((flags & MQTT_CONNECT_FLAG_PASSWORD) != 0) {
         mqtt_output_append_string(&client->output, client_info->client_pass, client_pass_len);
     }
+#if USE_SOCKET
+    if(err=(client->conn->connected_fn(&client,client->conn,err))!=ERR_OK){
+        client->conn->err_fn(&client,err);
+    } //调用mqtt_tcp_connected注册几个函数并发送mqtt连接报文
+#endif
     return ERR_OK;
 
     tcp_fail:
 #if USE_LWIP
     altcp_abort(client->conn);
     client->conn = NULL;
-    exit(00;)
+    return err;
 #else
     close(client->conn);
-    exit(0);
-#endif
     return err;
+#endif
 }
 
 

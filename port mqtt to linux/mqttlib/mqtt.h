@@ -1,20 +1,14 @@
 #ifndef LWIP_HDR_APPS_MQTT_CLIENT_H
 #define LWIP_HDR_APPS_MQTT_CLIENT_H
-
 #define USE_SOCKET 1
 #define USE_LWIP 0
-#define MQTT_PORT     1883
-#define LOCAL_PORT     1883
-#define IP_ADDR "192.168.1.1"
 #if USE_SOCKET
 #include "port_types.h"
 #include "network.h"
 #define TCP_WRITE_FLAG_COPY 0x01
 #define TCP_WRITE_FLAG_MORE 0x02
 #endif
-
 typedef struct mqtt_client_s mqtt_client_t;
-
 typedef enum
 {
     /** Accepted */
@@ -40,12 +34,23 @@ typedef void (*mqtt_incoming_publish_cb_t)(void *arg, const char *topic, u32_t t
 typedef void (*mqtt_request_cb_t)(void *arg, err_t err);
 typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
 
+
+
+
+#define MQTT_PORT     1883
+#define LOCAL_PORT     1883
+#define IP_ADDR "192.168.1.1"
+
+
+
+
+
 #if USE_SOCKET
 #define LWIP_ARRAYSIZE(x) (sizeof(x)/sizeof((x)[0]))
 
 #include <arpa/inet.h>
 #include <netinet/in.h>
-
+#include <errno.h>
 #include <sys/socket.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -53,8 +58,11 @@ typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_conn
 #include <netinet/tcp.h>
 #include <sys/param.h>
 #include <netdb.h>
+#include <sys/time.h>
 
 #endif
+
+
 #include <stdlib.h>
 #include "mqtt_opts.h"
 #include "mqtt_priv.h"

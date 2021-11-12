@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG
 
 C_DEFINES = 
 
-C_INCLUDES = -I"/home/pi/tmp/port mqtt to linux/mqttlib" 
+C_INCLUDES = -I/home/pi/Desktop/tmp/mqttlib 
 

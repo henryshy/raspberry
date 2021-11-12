@@ -6,4 +6,4 @@ include_directories (mqttlib)
 
 aux_source_directory (mqttlib SRC_LIST)
 
-add_executable(mqtt mqtt_client.c ${SRC_LIST} mqttlib/network.c mqttlib/network.h)
+add_executable(mqtt mqtt_client.c ${SRC_LIST} )

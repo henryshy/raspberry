@@ -1,3 +1,3 @@
-/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/CMakeFiles/rebuild_cache.dir
-/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/CMakeFiles/mqtt.dir
-/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/mqtt.dir
+/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/edit_cache.dir

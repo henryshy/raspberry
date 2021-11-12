@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="raspberry (dea80244-f4dd-4d14-9673-e26be5f0f2ab)" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="raspberry (dea80244-f4dd-4d14-9673-e26be5f0f2ab)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/port mqtt to linux" local="$PROJECT_DIR$" />
+            <mapping deploy="/Desktop/tmp" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspberry" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspberry" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
         </serverdata>
       </paths>

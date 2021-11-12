@@ -1,3 +1,0 @@
-/tmp/tmp.Hbp8jTtr81/cmake-build-release-rasp2/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.Hbp8jTtr81/cmake-build-release-rasp2/CMakeFiles/mqtt.dir
-/tmp/tmp.Hbp8jTtr81/cmake-build-release-rasp2/CMakeFiles/edit_cache.dir

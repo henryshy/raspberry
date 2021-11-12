@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pi/tmp/port mqtt to linux/mqtt_client.c" "/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/CMakeFiles/mqtt.dir/mqtt_client.c.o"
-  "/home/pi/tmp/port mqtt to linux/mqttlib/mqtt.c" "/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o"
-  "/home/pi/tmp/port mqtt to linux/mqttlib/network.c" "/home/pi/tmp/port mqtt to linux/cmake-build-release-raspberry/CMakeFiles/mqtt.dir/mqttlib/network.c.o"
+  "/home/pi/Desktop/tmp/mqtt_client.c" "/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/mqtt.dir/mqtt_client.c.o"
+  "/home/pi/Desktop/tmp/mqttlib/mqtt.c" "/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o"
+  "/home/pi/Desktop/tmp/mqttlib/network.c" "/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/mqtt.dir/mqttlib/network.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

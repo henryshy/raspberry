@@ -1,3 +1,0 @@
-C:/user files/raspberry/port mqtt to linux/cmake-build-debug-mingw/CMakeFiles/mqtt.dir
-C:/user files/raspberry/port mqtt to linux/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
-C:/user files/raspberry/port mqtt to linux/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
