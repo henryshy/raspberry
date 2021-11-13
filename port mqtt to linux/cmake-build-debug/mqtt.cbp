@@ -8,100 +8,96 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/pi/Desktop/tmp/cmake-build-debug"/>
+				<Option working_dir="D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/pi/Desktop/tmp/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mqtt">
-				<Option output="/home/pi/Desktop/tmp/cmake-build-debug/mqtt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pi/Desktop/tmp/cmake-build-debug"/>
+				<Option output="D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/mqtt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/pi/Desktop/tmp/mqttlib"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>
-					<Add directory="/usr/include/arm-linux-gnueabihf"/>
-					<Add directory="/usr/include"/>
+					<Add directory="D:/embedded system/raspberry/port mqtt to linux/mqttlib"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mqtt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 mqtt"/>
+					<CompileFile command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mqtt/fast">
-				<Option output="/home/pi/Desktop/tmp/cmake-build-debug/mqtt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pi/Desktop/tmp/cmake-build-debug"/>
+				<Option output="D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/mqtt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/pi/Desktop/tmp/mqttlib"/>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/arm-linux-gnueabihf/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed"/>
-					<Add directory="/usr/include/arm-linux-gnueabihf"/>
-					<Add directory="/usr/include"/>
+					<Add directory="D:/embedded system/raspberry/port mqtt to linux/mqttlib"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/User Util/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mqtt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 mqtt/fast"/>
+					<CompileFile command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/pi/Desktop/tmp/cmake-build-debug"/>
+				<Option working_dir="D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pi/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/USERUT~1/mingw64/bin/mingw32-make.exe -f &quot;D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pi/Desktop/tmp/mqtt_client.c">
+		<Unit filename="D:/embedded system/raspberry/port mqtt to linux/mqtt_client.c">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/tmp/mqttlib/mqtt.c">
+		<Unit filename="D:/embedded system/raspberry/port mqtt to linux/mqttlib/mqtt.c">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/tmp/mqttlib/mqtt.h">
+		<Unit filename="D:/embedded system/raspberry/port mqtt to linux/mqttlib/mqtt.h">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/tmp/mqttlib/network.c">
+		<Unit filename="D:/embedded system/raspberry/port mqtt to linux/mqttlib/network.c">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/tmp/mqttlib/network.h">
+		<Unit filename="D:/embedded system/raspberry/port mqtt to linux/mqttlib/network.h">
 			<Option target="mqtt"/>
 		</Unit>
-		<Unit filename="/home/pi/Desktop/tmp/CMakeLists.txt">
+		<Unit filename="D:/embedded system/raspberry/port mqtt to linux/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

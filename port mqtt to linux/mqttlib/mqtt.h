@@ -1,14 +1,26 @@
 #ifndef LWIP_HDR_APPS_MQTT_CLIENT_H
 #define LWIP_HDR_APPS_MQTT_CLIENT_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+typedef struct mqtt_client_s mqtt_client_t;
 #define USE_SOCKET 1
 #define USE_LWIP 0
+
+
+
 #if USE_SOCKET
-#include "port_types.h"
 #include "network.h"
+#include "port_types.h"
+
 #define TCP_WRITE_FLAG_COPY 0x01
 #define TCP_WRITE_FLAG_MORE 0x02
 #endif
-typedef struct mqtt_client_s mqtt_client_t;
+
+
+
+
 typedef enum
 {
     /** Accepted */
@@ -35,17 +47,10 @@ typedef void (*mqtt_request_cb_t)(void *arg, err_t err);
 typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
 
 
-
-
 #define MQTT_PORT     1883
-#define LOCAL_PORT     1883
-#define IP_ADDR "192.168.1.1"
-
-
-
-
 
 #if USE_SOCKET
+
 #define LWIP_ARRAYSIZE(x) (sizeof(x)/sizeof((x)[0]))
 
 #include <arpa/inet.h>
@@ -123,6 +128,9 @@ err_t mqtt_publish(mqtt_client_t *client, const char *topic, const void *payload
                                     mqtt_request_cb_t cb, void *arg);
 
 
+#ifdef __cplusplus
+}
 #endif
 
-#endif /* LWIP_HDR_APPS_MQTT_CLIENT_H */
+
+#endif

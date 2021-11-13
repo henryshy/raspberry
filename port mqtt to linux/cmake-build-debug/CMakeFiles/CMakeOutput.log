@@ -1,6 +1,6 @@
-The system is: Linux - 5.10.63-v7l+ - armv7l
+The system is: Windows - 10.0.19043 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /usr/bin/cc 
+Compiler: C:/User Util/mingw64/bin/gcc.exe 
 Build flags: 
 Id flags:  
 
@@ -8,12 +8,12 @@ The output was:
 0
 
 
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
 
-The C compiler identification is GNU, found in "/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/a.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
+Compiler: C:/User Util/mingw64/bin/g++.exe 
 Build flags: 
 Id flags:  
 
@@ -21,413 +21,486 @@ The output was:
 0
 
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
 
-The CXX compiler identification is GNU, found in "/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
-
-Determining if the C compiler works passed with the following output:
-Change Dir: /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make cmTC_4c5b5/fast && /usr/bin/make -f CMakeFiles/cmTC_4c5b5.dir/build.make CMakeFiles/cmTC_4c5b5.dir/build
-make[1]: 进入目录“/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_4c5b5.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_4c5b5.dir/testCCompiler.c.o   -c /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_4c5b5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c5b5.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4c5b5.dir/testCCompiler.c.o  -o cmTC_4c5b5 
-make[1]: 离开目录“/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp”
-
-
+The CXX compiler identification is GNU, found in "D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdCXX/a.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_cd518/fast && /usr/bin/make -f CMakeFiles/cmTC_cd518.dir/build.make CMakeFiles/cmTC_cd518.dir/build
-make[1]: Entering directory '/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
-Using built-in specs.
-COLLECT_GCC=/usr/bin/cc
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
-Thread model: posix
-gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/8/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccypj6th.s
-GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)
-	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
-ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/include"
-#include "..." search starts here:
-#include <...> search starts here:
- /usr/lib/gcc/arm-linux-gnueabihf/8/include
- /usr/local/include
- /usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed
- /usr/include/arm-linux-gnueabihf
- /usr/include
-End of search list.
-GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)
-	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: bcc8c085e8c103b65550a3bb7c44a354
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o /tmp/ccypj6th.s
-GNU assembler version 2.31.1 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.31.1
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-Linking C executable cmTC_cd518
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd518.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o  -o cmTC_cd518 
-Using built-in specs.
-COLLECT_GCC=/usr/bin/cc
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
-Thread model: posix
-gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_cd518'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmvXQSg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_cd518 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_cd518'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-make[1]: Leaving directory '/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command(s):C:/USERUT~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d1f1a/fast && C:/USERUT~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_d1f1a.dir\build.make CMakeFiles/cmTC_d1f1a.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d1f1a.dir/CMakeCCompilerABI.c.obj
+C:\USERUT~1\mingw64\bin\gcc.exe   -v -o CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj -c "C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\USERUT~1\mingw64\bin\gcc.exe
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib '
+Thread model: posix
+gcc version 8.1.0 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona'
+ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/cc1.exe -quiet -v -iprefix C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/ -D_REENTRANT C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\12719\AppData\Local\Temp\ccWCIoca.s
+GNU C17 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)
+	compiled by GNU C version 8.1.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include"
+ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../include"
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/mingw/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include
+End of search list.
+GNU C17 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)
+	compiled by GNU C version 8.1.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 7d6121789872d4509209e56c3264e038
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona'
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj C:\Users\12719\AppData\Local\Temp\ccWCIoca.s
+GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30
+COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../libexec/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/
+LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../lib/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona'
+Linking C executable cmTC_d1f1a.exe
+"C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d1f1a.dir\link.txt --verbose=1
+"C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_d1f1a.dir/objects.a
+C:\USERUT~1\mingw64\bin\ar.exe cr CMakeFiles\cmTC_d1f1a.dir/objects.a @CMakeFiles\cmTC_d1f1a.dir\objects1.rsp
+C:\USERUT~1\mingw64\bin\gcc.exe  -v -Wl,--whole-archive CMakeFiles\cmTC_d1f1a.dir/objects.a -Wl,--no-whole-archive -o cmTC_d1f1a.exe -Wl,--out-implib,libcmTC_d1f1a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\USERUT~1\mingw64\bin\gcc.exe
+COLLECT_LTO_WRAPPER=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib '
+Thread model: posix
+gcc version 8.1.0 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) 
+COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../libexec/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/
+LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../lib/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d1f1a.exe' '-mtune=core2' '-march=nocona'
+ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2.exe -plugin C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/liblto_plugin-0.dll -plugin-opt=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\12719\AppData\Local\Temp\ccwVQagh.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_d1f1a.exe C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0 -LC:/USERUT~1/mingw64/bin/../lib/gcc -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../.. --whole-archive CMakeFiles\cmTC_d1f1a.dir/objects.a --no-whole-archive --out-implib libcmTC_d1f1a.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d1f1a.exe' '-mtune=core2' '-march=nocona'
+mingw32-make.exe[1]: Leaving directory 'D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 
 Parsed C implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/usr/lib/gcc/arm-linux-gnueabihf/8/include]
-    add: [/usr/local/include]
-    add: [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
-    add: [/usr/include/arm-linux-gnueabihf]
-    add: [/usr/include]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include]
   end of search list found
-  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/8/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8/include]
-  collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
-  collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
-  collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/lib/gcc/arm-linux-gnueabihf/8/include;/usr/local/include;/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed;/usr/include/arm-linux-gnueabihf;/usr/include]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/include]
+  implicit include dirs: [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed;C:/User Util/mingw64/x86_64-w64-mingw32/include]
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_cd518/fast && /usr/bin/make -f CMakeFiles/cmTC_cd518.dir/build.make CMakeFiles/cmTC_cd518.dir/build]
-  ignore line: [make[1]: Entering directory '/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):C:/USERUT~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d1f1a/fast && C:/USERUT~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_d1f1a.dir\build.make CMakeFiles/cmTC_d1f1a.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_d1f1a.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [C:\USERUT~1\mingw64\bin\gcc.exe   -v -o CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj -c "C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCCompilerABI.c"]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [COLLECT_GCC=C:\USERUT~1\mingw64\bin\gcc.exe]
+  ignore line: [Target: x86_64-w64-mingw32]
+  ignore line: [Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib ']
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccypj6th.s]
-  ignore line: [GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 8.3.0  GMP version 6.1.2  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.20-GMP]
+  ignore line: [gcc version 8.1.0 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona']
+  ignore line: [ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/cc1.exe -quiet -v -iprefix C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/ -D_REENTRANT C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\12719\AppData\Local\Temp\ccWCIoca.s]
+  ignore line: [GNU C17 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)]
+  ignore line: [	compiled by GNU C version 8.1.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include"]
+  ignore line: [ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../include"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"]
+  ignore line: [ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/mingw/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/include]
-  ignore line: [ /usr/local/include]
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
-  ignore line: [ /usr/include/arm-linux-gnueabihf]
-  ignore line: [ /usr/include]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C17 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 8.3.0  GMP version 6.1.2  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.20-GMP]
+  ignore line: [GNU C17 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)]
+  ignore line: [	compiled by GNU C version 8.1.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: bcc8c085e8c103b65550a3bb7c44a354]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o /tmp/ccypj6th.s]
-  ignore line: [GNU assembler version 2.31.1 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.31.1]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [Linking C executable cmTC_cd518]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd518.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o  -o cmTC_cd518 ]
+  ignore line: [Compiler executable checksum: 7d6121789872d4509209e56c3264e038]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona']
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj C:\Users\12719\AppData\Local\Temp\ccWCIoca.s]
+  ignore line: [GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30]
+  ignore line: [COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../libexec/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/]
+  ignore line: [LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d1f1a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona']
+  ignore line: [Linking C executable cmTC_d1f1a.exe]
+  ignore line: ["C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d1f1a.dir\link.txt --verbose=1]
+  ignore line: ["C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_d1f1a.dir/objects.a]
+  ignore line: [C:\USERUT~1\mingw64\bin\ar.exe cr CMakeFiles\cmTC_d1f1a.dir/objects.a @CMakeFiles\cmTC_d1f1a.dir\objects1.rsp]
+  ignore line: [C:\USERUT~1\mingw64\bin\gcc.exe  -v -Wl --whole-archive CMakeFiles\cmTC_d1f1a.dir/objects.a -Wl --no-whole-archive -o cmTC_d1f1a.exe -Wl --out-implib libcmTC_d1f1a.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [COLLECT_GCC=C:\USERUT~1\mingw64\bin\gcc.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe]
+  ignore line: [Target: x86_64-w64-mingw32]
+  ignore line: [Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib ']
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_cd518'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmvXQSg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_cd518 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/collect2] ==> ignore
+  ignore line: [gcc version 8.1.0 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) ]
+  ignore line: [COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../libexec/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/]
+  ignore line: [LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d1f1a.exe' '-mtune=core2' '-march=nocona']
+  link line: [ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2.exe -plugin C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/liblto_plugin-0.dll -plugin-opt=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\12719\AppData\Local\Temp\ccwVQagh.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_d1f1a.exe C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0 -LC:/USERUT~1/mingw64/bin/../lib/gcc -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../.. --whole-archive CMakeFiles\cmTC_d1f1a.dir/objects.a --no-whole-archive --out-implib libcmTC_d1f1a.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+    arg [C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccmvXQSg.res] ==> ignore
+    arg [C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/liblto_plugin-0.dll] ==> ignore
+    arg [-plugin-opt=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\12719\AppData\Local\Temp\ccwVQagh.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+    arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+    arg [-plugin-opt=-pass-through=-liconv] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib/ld-linux-armhf.so.3] ==> ignore
-    arg [-X] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [--sysroot=C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64] ==> ignore
     arg [-m] ==> ignore
-    arg [armelf_linux_eabi] ==> ignore
+    arg [i386pep] ==> ignore
+    arg [-Bdynamic] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_cd518] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..]
-    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
-    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_cd518.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [cmTC_d1f1a.exe] ==> ignore
+    arg [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+    arg [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o] ==> obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../..] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../..]
+    arg [--whole-archive] ==> ignore
+    arg [CMakeFiles\cmTC_d1f1a.dir/objects.a] ==> ignore
+    arg [--no-whole-archive] ==> ignore
+    arg [--out-implib] ==> ignore
+    arg [libcmTC_d1f1a.dll.a] ==> ignore
+    arg [--major-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [--minor-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [-lmingw32] ==> lib [mingw32]
     arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
-    arg [-lc] ==> lib [c]
+    arg [-lgcc_eh] ==> lib [gcc_eh]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ladvapi32] ==> lib [advapi32]
+    arg [-lshell32] ==> lib [shell32]
+    arg [-luser32] ==> lib [user32]
+    arg [-lkernel32] ==> lib [kernel32]
+    arg [-liconv] ==> lib [iconv]
+    arg [-lmingw32] ==> lib [mingw32]
     arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> [/usr/lib]
-  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
-  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
-  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/8;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+    arg [-lgcc_eh] ==> lib [gcc_eh]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o] ==> obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+  remove lib [gcc_eh]
+  remove lib [msvcrt]
+  remove lib [gcc_eh]
+  remove lib [msvcrt]
+  collapse obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/lib/crt2.o]
+  collapse obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o]
+  collapse obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc] ==> [C:/User Util/mingw64/lib/gcc]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/lib]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib] ==> [C:/User Util/mingw64/lib]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/lib]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../..] ==> [C:/User Util/mingw64/lib]
+  implicit libs: [mingw32;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex]
+  implicit objs: [C:/User Util/mingw64/x86_64-w64-mingw32/lib/crt2.o;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+  implicit dirs: [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0;C:/User Util/mingw64/lib/gcc;C:/User Util/mingw64/x86_64-w64-mingw32/lib;C:/User Util/mingw64/lib]
   implicit fwks: []
 
 
-Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make cmTC_46465/fast && /usr/bin/make -f CMakeFiles/cmTC_46465.dir/build.make CMakeFiles/cmTC_46465.dir/build
-make[1]: 进入目录“/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_46465.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_46465.dir/testCXXCompiler.cxx.o -c /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_46465
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46465.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_46465.dir/testCXXCompiler.cxx.o  -o cmTC_46465 
-make[1]: 离开目录“/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp”
-
-
-
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_fc1a1/fast && /usr/bin/make -f CMakeFiles/cmTC_fc1a1.dir/build.make CMakeFiles/cmTC_fc1a1.dir/build
-make[1]: Entering directory '/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++    -v -o CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
-Using built-in specs.
-COLLECT_GCC=/usr/bin/c++
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
-Thread model: posix
-gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/8/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccafWLxU.s
-GNU C++14 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)
-	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/8"
-ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
-ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/include"
-#include "..." search starts here:
-#include <...> search starts here:
- /usr/include/c++/8
- /usr/include/arm-linux-gnueabihf/c++/8
- /usr/include/c++/8/backward
- /usr/lib/gcc/arm-linux-gnueabihf/8/include
- /usr/local/include
- /usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed
- /usr/include/arm-linux-gnueabihf
- /usr/include
-End of search list.
-GNU C++14 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)
-	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.20-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 7defdc925cf5fede452fc531d54623d1
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccafWLxU.s
-GNU assembler version 2.31.1 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.31.1
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-Linking CXX executable cmTC_fc1a1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc1a1.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fc1a1 
-Using built-in specs.
-COLLECT_GCC=/usr/bin/c++
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
-Thread model: posix
-gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fc1a1' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2UpuK2.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_fc1a1 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fc1a1' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-make[1]: Leaving directory '/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command(s):C:/USERUT~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_77f1b/fast && C:/USERUT~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_77f1b.dir\build.make CMakeFiles/cmTC_77f1b.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_77f1b.dir/CMakeCXXCompilerABI.cpp.obj
+C:\USERUT~1\mingw64\bin\G__~1.EXE   -v -o CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp"
+Using built-in specs.
+COLLECT_GCC=C:\USERUT~1\mingw64\bin\G__~1.EXE
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib '
+Thread model: posix
+gcc version 8.1.0 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona'
+ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/cc1plus.exe -quiet -v -iprefix C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/ -D_REENTRANT C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj -version -o C:\Users\12719\AppData\Local\Temp\ccshmIMw.s
+GNU C++14 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)
+	compiled by GNU C version 8.1.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include"
+ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../include"
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"
+ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/mingw/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include
+End of search list.
+GNU C++14 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)
+	compiled by GNU C version 8.1.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 4d9b8bf99f17512bc9c3ca87fdffa973
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona'
+ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\12719\AppData\Local\Temp\ccshmIMw.s
+GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30
+COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../libexec/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/
+LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../lib/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona'
+Linking CXX executable cmTC_77f1b.exe
+"C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_77f1b.dir\link.txt --verbose=1
+"C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_77f1b.dir/objects.a
+C:\USERUT~1\mingw64\bin\ar.exe cr CMakeFiles\cmTC_77f1b.dir/objects.a @CMakeFiles\cmTC_77f1b.dir\objects1.rsp
+C:\USERUT~1\mingw64\bin\G__~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_77f1b.dir/objects.a -Wl,--no-whole-archive -o cmTC_77f1b.exe -Wl,--out-implib,libcmTC_77f1b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\USERUT~1\mingw64\bin\G__~1.EXE
+COLLECT_LTO_WRAPPER=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib '
+Thread model: posix
+gcc version 8.1.0 (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) 
+COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../libexec/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/
+LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/;C:/USERUT~1/mingw64/bin/../lib/gcc/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/;C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_77f1b.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona'
+ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2.exe -plugin C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/liblto_plugin-0.dll -plugin-opt=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\12719\AppData\Local\Temp\ccS4iGbD.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_77f1b.exe C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0 -LC:/USERUT~1/mingw64/bin/../lib/gcc -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../.. --whole-archive CMakeFiles\cmTC_77f1b.dir/objects.a --no-whole-archive --out-implib libcmTC_77f1b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_77f1b.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona'
+mingw32-make.exe[1]: Leaving directory 'D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/usr/include/c++/8]
-    add: [/usr/include/arm-linux-gnueabihf/c++/8]
-    add: [/usr/include/c++/8/backward]
-    add: [/usr/lib/gcc/arm-linux-gnueabihf/8/include]
-    add: [/usr/local/include]
-    add: [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
-    add: [/usr/include/arm-linux-gnueabihf]
-    add: [/usr/include]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed]
+    add: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include]
   end of search list found
-  collapse include dir [/usr/include/c++/8] ==> [/usr/include/c++/8]
-  collapse include dir [/usr/include/arm-linux-gnueabihf/c++/8] ==> [/usr/include/arm-linux-gnueabihf/c++/8]
-  collapse include dir [/usr/include/c++/8/backward] ==> [/usr/include/c++/8/backward]
-  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/8/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8/include]
-  collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
-  collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
-  collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/include/c++/8;/usr/include/arm-linux-gnueabihf/c++/8;/usr/include/c++/8/backward;/usr/lib/gcc/arm-linux-gnueabihf/8/include;/usr/local/include;/usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed;/usr/include/arm-linux-gnueabihf;/usr/include]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed]
+  collapse include dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/include]
+  implicit include dirs: [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed;C:/User Util/mingw64/x86_64-w64-mingw32/include]
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_fc1a1/fast && /usr/bin/make -f CMakeFiles/cmTC_fc1a1.dir/build.make CMakeFiles/cmTC_fc1a1.dir/build]
-  ignore line: [make[1]: Entering directory '/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):C:/USERUT~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_77f1b/fast && C:/USERUT~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_77f1b.dir\build.make CMakeFiles/cmTC_77f1b.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/embedded system/raspberry/port mqtt to linux/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_77f1b.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [C:\USERUT~1\mingw64\bin\G__~1.EXE   -v -o CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp"]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [COLLECT_GCC=C:\USERUT~1\mingw64\bin\G__~1.EXE]
+  ignore line: [Target: x86_64-w64-mingw32]
+  ignore line: [Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib ']
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccafWLxU.s]
-  ignore line: [GNU C++14 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 8.3.0  GMP version 6.1.2  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.20-GMP]
+  ignore line: [gcc version 8.1.0 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona']
+  ignore line: [ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/cc1plus.exe -quiet -v -iprefix C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/ -D_REENTRANT C:\User Util\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj -version -o C:\Users\12719\AppData\Local\Temp\ccshmIMw.s]
+  ignore line: [GNU C++14 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)]
+  ignore line: [	compiled by GNU C version 8.1.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/8"]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include"]
+  ignore line: [ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../include"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "C:/USERUT~1/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"]
+  ignore line: [ignoring nonexistent directory "C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/mingw/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/include/c++/8]
-  ignore line: [ /usr/include/arm-linux-gnueabihf/c++/8]
-  ignore line: [ /usr/include/c++/8/backward]
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/include]
-  ignore line: [ /usr/local/include]
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed]
-  ignore line: [ /usr/include/arm-linux-gnueabihf]
-  ignore line: [ /usr/include]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed]
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C++14 (Raspbian 8.3.0-6+rpi1) version 8.3.0 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 8.3.0  GMP version 6.1.2  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.20-GMP]
+  ignore line: [GNU C++14 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)]
+  ignore line: [	compiled by GNU C version 8.1.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 7defdc925cf5fede452fc531d54623d1]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccafWLxU.s]
-  ignore line: [GNU assembler version 2.31.1 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.31.1]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [Linking CXX executable cmTC_fc1a1]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc1a1.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fc1a1 ]
+  ignore line: [Compiler executable checksum: 4d9b8bf99f17512bc9c3ca87fdffa973]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona']
+  ignore line: [ C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\12719\AppData\Local\Temp\ccshmIMw.s]
+  ignore line: [GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30]
+  ignore line: [COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../libexec/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/]
+  ignore line: [LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_77f1b.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona']
+  ignore line: [Linking CXX executable cmTC_77f1b.exe]
+  ignore line: ["C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_77f1b.dir\link.txt --verbose=1]
+  ignore line: ["C:\User Util\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_77f1b.dir/objects.a]
+  ignore line: [C:\USERUT~1\mingw64\bin\ar.exe cr CMakeFiles\cmTC_77f1b.dir/objects.a @CMakeFiles\cmTC_77f1b.dir\objects1.rsp]
+  ignore line: [C:\USERUT~1\mingw64\bin\G__~1.EXE  -v -Wl --whole-archive CMakeFiles\cmTC_77f1b.dir/objects.a -Wl --no-whole-archive -o cmTC_77f1b.exe -Wl --out-implib libcmTC_77f1b.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 8.3.0-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [COLLECT_GCC=C:\USERUT~1\mingw64\bin\G__~1.EXE]
+  ignore line: [COLLECT_LTO_WRAPPER=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe]
+  ignore line: [Target: x86_64-w64-mingw32]
+  ignore line: [Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 --enable-shared --enable-static --enable-targets=all --enable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-sjlj-exceptions --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch-32=i686 --with-arch-64=nocona --with-tune-32=generic --with-tune-64=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-sjlj-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib ']
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fc1a1' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2UpuK2.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_fc1a1 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/collect2] ==> ignore
+  ignore line: [gcc version 8.1.0 (x86_64-posix-sjlj-rev0  Built by MinGW-W64 project) ]
+  ignore line: [COMPILER_PATH=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../libexec/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/]
+  ignore line: [LIBRARY_PATH=C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/]
+  ignore line: [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_77f1b.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona']
+  link line: [ C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2.exe -plugin C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/liblto_plugin-0.dll -plugin-opt=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\12719\AppData\Local\Temp\ccS4iGbD.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_77f1b.exe C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0 -LC:/USERUT~1/mingw64/bin/../lib/gcc -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib -LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../.. --whole-archive CMakeFiles\cmTC_77f1b.dir/objects.a --no-whole-archive --out-implib libcmTC_77f1b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+    arg [C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc2UpuK2.res] ==> ignore
+    arg [C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/liblto_plugin-0.dll] ==> ignore
+    arg [-plugin-opt=C:/USERUT~1/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\12719\AppData\Local\Temp\ccS4iGbD.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+    arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+    arg [-plugin-opt=-pass-through=-liconv] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib/ld-linux-armhf.so.3] ==> ignore
-    arg [-X] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [--sysroot=C:/mingw810/x86_64-810-posix-sjlj-rt_v6-rev0/mingw64] ==> ignore
     arg [-m] ==> ignore
-    arg [armelf_linux_eabi] ==> ignore
+    arg [i386pep] ==> ignore
+    arg [-Bdynamic] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fc1a1] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..]
-    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
-    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_fc1a1.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [cmTC_77f1b.exe] ==> ignore
+    arg [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+    arg [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o] ==> obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib]
+    arg [-LC:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../..] ==> dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../..]
+    arg [--whole-archive] ==> ignore
+    arg [CMakeFiles\cmTC_77f1b.dir/objects.a] ==> ignore
+    arg [--no-whole-archive] ==> ignore
+    arg [--out-implib] ==> ignore
+    arg [libcmTC_77f1b.dll.a] ==> ignore
+    arg [--major-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [--minor-image-version] ==> ignore
+    arg [0] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
-    arg [-lm] ==> lib [m]
+    arg [-lmingw32] ==> lib [mingw32]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [-lc] ==> lib [c]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ladvapi32] ==> lib [advapi32]
+    arg [-lshell32] ==> lib [shell32]
+    arg [-luser32] ==> lib [user32]
+    arg [-lkernel32] ==> lib [kernel32]
+    arg [-liconv] ==> lib [iconv]
+    arg [-lmingw32] ==> lib [mingw32]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8] ==> [/usr/lib/gcc/arm-linux-gnueabihf/8]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> [/usr/lib]
-  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
-  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
-  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/8;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o] ==> obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+  remove lib [msvcrt]
+  remove lib [msvcrt]
+  collapse obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/lib/crt2.o]
+  collapse obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o]
+  collapse obj [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0] ==> [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc] ==> [C:/User Util/mingw64/lib/gcc]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/lib]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../lib] ==> [C:/User Util/mingw64/lib]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/User Util/mingw64/x86_64-w64-mingw32/lib]
+  collapse library dir [C:/USERUT~1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../..] ==> [C:/User Util/mingw64/lib]
+  implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex]
+  implicit objs: [C:/User Util/mingw64/x86_64-w64-mingw32/lib/crt2.o;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtbegin.o;C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/crtend.o]
+  implicit dirs: [C:/User Util/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0;C:/User Util/mingw64/lib/gcc;C:/User Util/mingw64/x86_64-w64-mingw32/lib;C:/User Util/mingw64/lib]
   implicit fwks: []
 
 

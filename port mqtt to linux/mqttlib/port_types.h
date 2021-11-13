@@ -1,7 +1,9 @@
 
 #ifndef MQTT_PORT_TYPES_H
 #define MQTT_PORT_TYPES_H
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include "mqtt.h"
 
 typedef unsigned char u8_t;
@@ -50,10 +52,12 @@ typedef struct ip_addr_t{
     u32_t addr;
 }ip_addr_t;
 
-#include <sys/types.h>
 
 
 
+#ifdef __cplusplus
+}
+#endif
 #endif //MQTT_PORT_TYPES_H
 
 

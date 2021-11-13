@@ -165,13 +165,27 @@ mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
     err_t err;
     u8_t wrap = 0;
     u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
-
+    struct mqtt_ringbuf_t* send_ringbuf;
+    send_ringbuf->get=0;
+    send_ringbuf->put=0;
     if ( ringbuf_lin_len == 0) {
         return;
     }
     wrap = (mqtt_ringbuf_len(rb) > ringbuf_lin_len);
     if(wrap){
+        memcpy(&(send_ringbuf->buf)[send_ringbuf->get],&(rb->buf)[rb->get],ringbuf_lin_len);
+        send_ringbuf->put=ringbuf_lin_len;
+        mqtt_ringbuf_advance_get_idx(rb, ringbuf_lin_len);
+        ringbuf_lin_len= mqtt_ringbuf_linear_read_length(rb);
+        memcpy(&(send_ringbuf->buf)[send_ringbuf->put],&(rb->buf)[rb->get],ringbuf_lin_len);
+        mqtt_ringbuf_advance_get_idx(rb, ringbuf_lin_len);
+        u16_t send_len= mqtt_ringbuf_len(send_ringbuf);
+        network_write(tpcb, mqtt_ringbuf_get_ptr(send_ringbuf),send_len);
 
+    }
+    else{
+        network_write(tpcb, mqtt_ringbuf_get_ptr(rb),ringbuf_lin_len);
+        mqtt_ringbuf_advance_get_idx(rb, ringbuf_lin_len);
     }
 
 
@@ -595,9 +609,6 @@ mqtt_message_received(mqtt_client_t *client, u8_t fixed_hdr_idx, u16_t length, u
     u8_t pkt_type = MQTT_CTL_PACKET_TYPE(client->rx_buffer[0]);
     u16_t pkt_id = 0;
 
-    //LWIP_ASSERT("client->msg_idx < MQTT_VAR_HEADER_BUFFER_LEN", client->msg_idx < MQTT_VAR_HEADER_BUFFER_LEN);
-    //LWIP_ASSERT("fixed_hdr_idx <= client->msg_idx", fixed_hdr_idx <= client->msg_idx);
-    //LWIP_ERROR("buffer length mismatch", fixed_hdr_idx + length <= MQTT_VAR_HEADER_BUFFER_LEN,return MQTT_CONNECT_DISCONNECTED);
 
     if (pkt_type == MQTT_MSG_TYPE_CONNACK) {
         if (client->conn_state == MQTT_CONNECTING) {
@@ -861,7 +872,9 @@ mqtt_tcp_recv_cb(void *arg, struct altcp_pcb *pcb, struct pbuf *p, err_t err)
         }
 
         /* Tell remote that data has been received */
+#if USE_LWIP
         altcp_recved(pcb, p->tot_len);
+#endif
         res = mqtt_parse_incoming(client, p);
         pbuf_free(p);
 
@@ -1298,7 +1311,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
 #if USE_LWIP
         client->conn = altcp_tcp_new_ip_type(IP_GET_TYPE(ip_addr));
 #elif USE_SOCKET
-        client->conn = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
+        client->conn->sockfd = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
         if(client->conn<0){
             printf("network error! can not create socket!\n");
             goto tcp_fail;
@@ -1360,7 +1373,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
 #if USE_SOCKET
     if(err=(client->conn->connected_fn(&client,client->conn,err))!=ERR_OK){
         client->conn->err_fn(&client,err);
-    } //璋冪敤mqtt_tcp_connected娉ㄥ唽鍑犱釜鍑芥暟骞跺彂閫乵qtt杩炴帴鎶ユ枃
+    } //调用mqtt_tcp_connected注册几个函数并发送mqtt连接报文
 #endif
     return ERR_OK;
 
@@ -1370,7 +1383,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     client->conn = NULL;
     return err;
 #else
-    close(client->conn);
+    close(client->conn->sockfd);
     return err;
 #endif
 }

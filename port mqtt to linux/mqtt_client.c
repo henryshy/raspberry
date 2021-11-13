@@ -1,9 +1,16 @@
 
 #include "mqtt_client.h"
-
+#include "string.h"
 
 mqtt_client_t static_client;
+int main(){
+    example_do_connect(&static_client,MQTT_SERVER_IP);
+    network_init(static_client.conn);
+    while (1){
 
+    }
+    return 0;
+}
 void example_do_connect(mqtt_client_t *client,unsigned char a,unsigned char b,unsigned char c,unsigned char d)
 {
     struct mqtt_connect_client_info_t ci;
@@ -14,11 +21,11 @@ void example_do_connect(mqtt_client_t *client,unsigned char a,unsigned char b,un
   /* Setup an empty client info structure */
 #endif
 #if USE_SOCKET
-    u8_t* ip=NULL;
-    strcat(ip,a);
-    strcat(ip,b);
-    strcat(ip,c);
-    strcat(ip,d);
+    u8_t ip[4];
+    ip[0]=a;
+    ip[1]=b;
+    ip[2]=c;
+    ip[3]=d;
     ip_addr_t ip_addr;
     ip_addr.addr= inet_addr(ip);
     printf("%d",ip_addr.addr);
