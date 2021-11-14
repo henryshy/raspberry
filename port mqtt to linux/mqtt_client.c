@@ -1,9 +1,17 @@
 
 #include "mqtt_client.h"
 #include "string.h"
-#include <sys/time.h>
-mqtt_client_t static_client;
 
+mqtt_client_t static_client;
+int main(){
+    network_init((struct altcp_pcb *)static_client.conn);
+    example_do_connect(&static_client,MQTT_SERVER_IP);
+
+    while (1){
+        MQTTYield(&static_client);
+    }
+    return 0;
+}
 void example_do_connect(mqtt_client_t *client,unsigned char a,unsigned char b,unsigned char c,unsigned char d)
 {
     struct mqtt_connect_client_info_t ci;
