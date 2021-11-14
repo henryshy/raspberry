@@ -47,7 +47,7 @@ typedef void (*mqtt_request_cb_t)(void *arg, err_t err);
 typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
 
 
-#define MQTT_PORT     1883
+
 
 #if USE_SOCKET
 
@@ -57,13 +57,14 @@ typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_conn
 #include <netinet/in.h>
 #include <errno.h>
 #include <sys/socket.h>
+#include <sys/time.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
 #include <netinet/tcp.h>
 #include <sys/param.h>
 #include <netdb.h>
-#include <sys/time.h>
+
 
 #endif
 

@@ -166,6 +166,7 @@ mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
     u8_t wrap = 0;
     u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
     struct mqtt_ringbuf_t* send_ringbuf;
+
     send_ringbuf->get=0;
     send_ringbuf->put=0;
     if ( ringbuf_lin_len == 0) {
@@ -180,11 +181,11 @@ mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
         memcpy(&(send_ringbuf->buf)[send_ringbuf->put],&(rb->buf)[rb->get],ringbuf_lin_len);
         mqtt_ringbuf_advance_get_idx(rb, ringbuf_lin_len);
         u16_t send_len= mqtt_ringbuf_len(send_ringbuf);
-        network_write(tpcb, mqtt_ringbuf_get_ptr(send_ringbuf),send_len);
+        tpcb->write_fn(tpcb, mqtt_ringbuf_get_ptr(send_ringbuf),send_len);
 
     }
     else{
-        network_write(tpcb, mqtt_ringbuf_get_ptr(rb),ringbuf_lin_len);
+        tpcb->write_fn(tpcb, mqtt_ringbuf_get_ptr(rb),ringbuf_lin_len);
         mqtt_ringbuf_advance_get_idx(rb, ringbuf_lin_len);
     }
 
@@ -1370,11 +1371,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     if ((flags & MQTT_CONNECT_FLAG_PASSWORD) != 0) {
         mqtt_output_append_string(&client->output, client_info->client_pass, client_pass_len);
     }
-#if USE_SOCKET
-    if(err=(client->conn->connected_fn(&client,client->conn,err))!=ERR_OK){
-        client->conn->err_fn(&client,err);
-    } //调用mqtt_tcp_connected注册几个函数并发送mqtt连接报文
-#endif
+
     return ERR_OK;
 
     tcp_fail:

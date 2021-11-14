@@ -19,6 +19,8 @@ errno.h
 -
 sys/socket.h
 -
+sys/time.h
+-
 unistd.h
 -
 stdio.h
@@ -30,8 +32,6 @@ netinet/tcp.h
 sys/param.h
 -
 netdb.h
--
-sys/time.h
 -
 stdlib.h
 -
@@ -61,24 +61,20 @@ errno.h
 -
 port_types.h
 ../mqttlib/port_types.h
+sys/time.h
+-
+mqtt_opts.h
+../mqttlib/mqtt_opts.h
 
 ../mqttlib/port_types.h
 mqtt.h
 ../mqttlib/mqtt.h
 
-/home/pi/Desktop/tmp/mqtt_client.c
+/home/pi/Desktop/tmp/main.c
+mqtt.h
+/home/pi/Desktop/tmp/mqtt.h
 mqtt_client.h
 /home/pi/Desktop/tmp/mqtt_client.h
-
-/home/pi/Desktop/tmp/mqttlib/mqtt.c
-mqtt.h
-/home/pi/Desktop/tmp/mqttlib/mqtt.h
-string.h
--
-network.h
-/home/pi/Desktop/tmp/mqttlib/network.h
-features.h
--
 
 /home/pi/Desktop/tmp/mqttlib/mqtt.h
 network.h
@@ -93,6 +89,8 @@ errno.h
 -
 sys/socket.h
 -
+sys/time.h
+-
 unistd.h
 -
 stdio.h
@@ -105,12 +103,24 @@ sys/param.h
 -
 netdb.h
 -
-sys/time.h
--
 stdlib.h
 -
 mqtt_opts.h
 /home/pi/Desktop/tmp/mqttlib/mqtt_opts.h
+mqtt_priv.h
+/home/pi/Desktop/tmp/mqttlib/mqtt_priv.h
+
+/home/pi/Desktop/tmp/mqttlib/mqtt_client.c
+mqtt_client.h
+/home/pi/Desktop/tmp/mqttlib/mqtt_client.h
+string.h
+/home/pi/Desktop/tmp/mqttlib/string.h
+sys/time.h
+-
+
+/home/pi/Desktop/tmp/mqttlib/mqtt_client.h
+mqtt.h
+/home/pi/Desktop/tmp/mqttlib/mqtt.h
 mqtt_priv.h
 /home/pi/Desktop/tmp/mqttlib/mqtt_priv.h
 
@@ -122,14 +132,6 @@ network.h
 mqtt.h
 /home/pi/Desktop/tmp/mqttlib/mqtt.h
 
-/home/pi/Desktop/tmp/mqttlib/network.c
-mqtt.h
-/home/pi/Desktop/tmp/mqttlib/mqtt.h
-network.h
-/home/pi/Desktop/tmp/mqttlib/network.h
-sys/time.h
-/home/pi/Desktop/tmp/mqttlib/sys/time.h
-
 /home/pi/Desktop/tmp/mqttlib/network.h
 mqtt.h
 /home/pi/Desktop/tmp/mqttlib/mqtt.h
@@ -137,6 +139,10 @@ errno.h
 -
 port_types.h
 /home/pi/Desktop/tmp/mqttlib/port_types.h
+sys/time.h
+-
+mqtt_opts.h
+/home/pi/Desktop/tmp/mqttlib/mqtt_opts.h
 
 /home/pi/Desktop/tmp/mqttlib/port_types.h
 mqtt.h

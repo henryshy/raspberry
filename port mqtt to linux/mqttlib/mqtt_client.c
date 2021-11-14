@@ -1,16 +1,9 @@
 
 #include "mqtt_client.h"
 #include "string.h"
-
+#include <sys/time.h>
 mqtt_client_t static_client;
-int main(){
-    example_do_connect(&static_client,MQTT_SERVER_IP);
-    network_init(static_client.conn);
-    while (1){
 
-    }
-    return 0;
-}
 void example_do_connect(mqtt_client_t *client,unsigned char a,unsigned char b,unsigned char c,unsigned char d)
 {
     struct mqtt_connect_client_info_t ci;
@@ -163,3 +156,5 @@ static void mqtt_pub_request_cb(void *arg, err_t result)
         printf("publish with data:%s success\n",pub_data);
     }
 }
+
+

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mqtt.dir/mqtt_client.c.o"
+  "CMakeFiles/mqtt.dir/main.c.o"
   "CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o"
+  "CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o"
   "CMakeFiles/mqtt.dir/mqttlib/network.c.o"
   "mqtt"
   "mqtt.pdb"

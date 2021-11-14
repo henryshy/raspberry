@@ -3,8 +3,10 @@
 
 #include "mqtt.h"
 #include "mqtt_priv.h"
-#define MQTT_SERVER_IP 192,168,31,115
 
+
+#define MQTT_SERVER_IP 192,168,10,160
+#define MQTT_PORT     1883
 #define mqtt_subscribe(client,topic,qos,cb,arg)		  mqtt_sub_unsub(client, topic, qos, cb, arg, 1)
 
 #define mqtt_unsubscribe(client,topic,cb,arg )		   mqtt_sub_unsub(client, topic, 0, cb, arg, 0)

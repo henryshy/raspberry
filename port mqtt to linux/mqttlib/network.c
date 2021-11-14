@@ -94,32 +94,26 @@ err_t network_connect(struct altcp_pcb *tpcb, const ip_addr_t *ipaddr, u16_t por
     }
 }
 
-int network_write(struct altcp_pcb *tpcb, unsigned char* buffer, int len){
+int network_write(struct altcp_pcb *tpcb, u8_t* buffer, int len){
+
     int	rc = write(tpcb->sockfd, buffer, len);
+    if(rc){
+        tpcb->sent_fn(tpcb->arg,tpcb,len);
+    }
     return rc;
 }
-int network_read(struct altcp_pcb *tpcb, unsigned char* buffer, int len)
+int network_read(struct altcp_pcb *tpcb, struct pbuf* buf, int len)
 {
 
-    int bytes = 0;
-    while (bytes < len)
-    {
-        int rc = recv(tpcb->sockfd, &buffer[bytes], (size_t)(len - bytes), 0);
-        if (rc == -1)
-        {
-            if (errno != EAGAIN && errno != EWOULDBLOCK)
-                bytes = -1;
-            break;
-        }
-        else if (rc == 0)
-        {
-            bytes = 0;
-            break;
-        }
-        else
-            bytes += rc;
+    int rc=recv(tpcb->sockfd,buf->payload,len,MSG_DONTWAIT);
+    if(rc) {
+        tpcb->recv_fn(tpcb->arg, tpcb, buf, ERR_OK);
     }
-    return bytes;
+    else{
+        tpcb->recv_fn(tpcb->arg, tpcb, buf, ERR_BUF);
+    }
+
+    return rc;
 }
 
 void network_init_timeout(u32_t msecs,network_timeout_handler handler, mqtt_client_t *client){
@@ -144,4 +138,10 @@ void pbuf_copy_partial(const struct pbuf *buf, void *dataptr, u16_t len, u16_t o
     memcpy(&((char *)dataptr)[0],&((char*)buf->payload)[offset],len);
 }
 
+int MQTTYield(mqtt_client_t* client){
+    int rc=1;
+    struct pbuf* buf= calloc(1,sizeof(struct pbuf));
+    rc=client->conn->read_fn(client->conn->sockfd,buf->payload,MQTT_VAR_HEADER_BUFFER_LEN);
+    return rc;
+}
 #endif

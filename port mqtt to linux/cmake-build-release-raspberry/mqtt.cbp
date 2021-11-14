@@ -86,13 +86,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pi/Desktop/tmp/mqtt_client.c">
+		<Unit filename="/home/pi/Desktop/tmp/main.c">
 			<Option target="mqtt"/>
 		</Unit>
 		<Unit filename="/home/pi/Desktop/tmp/mqttlib/mqtt.c">
 			<Option target="mqtt"/>
 		</Unit>
 		<Unit filename="/home/pi/Desktop/tmp/mqttlib/mqtt.h">
+			<Option target="mqtt"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/tmp/mqttlib/mqtt_client.c">
+			<Option target="mqtt"/>
+		</Unit>
+		<Unit filename="/home/pi/Desktop/tmp/mqttlib/mqtt_client.h">
 			<Option target="mqtt"/>
 		</Unit>
 		<Unit filename="/home/pi/Desktop/tmp/mqttlib/network.c">

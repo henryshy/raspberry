@@ -9,10 +9,12 @@ extern "C" {
 
 
 #include "mqtt.h"
+
+#if USE_SOCKET
 #include <errno.h>
 #include "port_types.h"
-#if USE_SOCKET
-
+#include <sys/time.h>
+#include "mqtt_opts.h"
 #define altcp_arg network_arg
 #define altcp_bind network_bind
 #define altcp_connect network_connect
@@ -50,17 +52,20 @@ typedef void (*network_timeout_handler)(void *arg);
     network_read_fn  read_fn;
     network_write_fn write_fn;
 };
-
+typedef struct Timer
+{
+    struct timeval end_time;
+} Timer;
 struct pbuf{
-    char* payload;
+    char payload[MQTT_VAR_HEADER_BUFFER_LEN];
     u16_t tot_len;
 };
 
 
 
 void network_init(struct altcp_pcb *tpcb);
-int network_read(struct altcp_pcb *tpcb, unsigned char*, int);
-int network_write(struct altcp_pcb *tpcb, unsigned char*, int);
+int network_write(struct altcp_pcb *tpcb, u8_t* buffer, int len);
+int network_read(struct altcp_pcb *tpcb, struct pbuf* buf, int len);
 void network_arg(struct altcp_pcb *tpcb,void* arg);
 err_t network_connect(struct altcp_pcb *tpcb, const ip_addr_t *ipaddr, u16_t port, network_tcp_connected_fn connected);
 err_t network_bind(struct altcp_pcb *tpcb, const ip_addr_t *ipaddr, u16_t port);
@@ -73,6 +78,9 @@ void network_init_timeout(u32_t msecs,network_timeout_handler handler, mqtt_clie
 void network_del_timeout(network_timeout_handler handler,mqtt_client_t *client);
 u8_t pbuf_get_at(struct pbuf *p,u16_t index);
 void pbuf_copy_partial(const struct pbuf *buf, void *dataptr, u16_t len, u16_t offset);
+
+int MQTTYield(mqtt_client_t* client);
+
 #endif //if use socket
 #ifdef __cplusplus
 }

@@ -57,18 +57,18 @@ include CMakeFiles/mqtt.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mqtt.dir/flags.make
 
-CMakeFiles/mqtt.dir/mqtt_client.c.o: CMakeFiles/mqtt.dir/flags.make
-CMakeFiles/mqtt.dir/mqtt_client.c.o: ../mqtt_client.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mqtt.dir/mqtt_client.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/mqtt_client.c.o   -c /home/pi/Desktop/tmp/mqtt_client.c
+CMakeFiles/mqtt.dir/main.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mqtt.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/main.c.o   -c /home/pi/Desktop/tmp/main.c
 
-CMakeFiles/mqtt.dir/mqtt_client.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/mqtt_client.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/Desktop/tmp/mqtt_client.c > CMakeFiles/mqtt.dir/mqtt_client.c.i
+CMakeFiles/mqtt.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/Desktop/tmp/main.c > CMakeFiles/mqtt.dir/main.c.i
 
-CMakeFiles/mqtt.dir/mqtt_client.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/mqtt_client.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/Desktop/tmp/mqtt_client.c -o CMakeFiles/mqtt.dir/mqtt_client.c.s
+CMakeFiles/mqtt.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/Desktop/tmp/main.c -o CMakeFiles/mqtt.dir/main.c.s
 
 CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o: CMakeFiles/mqtt.dir/flags.make
 CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o: ../mqttlib/mqtt.c
@@ -83,9 +83,22 @@ CMakeFiles/mqtt.dir/mqttlib/mqtt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/mqttlib/mqtt.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/Desktop/tmp/mqttlib/mqtt.c -o CMakeFiles/mqtt.dir/mqttlib/mqtt.c.s
 
+CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o: ../mqttlib/mqtt_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o   -c /home/pi/Desktop/tmp/mqttlib/mqtt_client.c
+
+CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/Desktop/tmp/mqttlib/mqtt_client.c > CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.i
+
+CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/Desktop/tmp/mqttlib/mqtt_client.c -o CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.s
+
 CMakeFiles/mqtt.dir/mqttlib/network.c.o: CMakeFiles/mqtt.dir/flags.make
 CMakeFiles/mqtt.dir/mqttlib/network.c.o: ../mqttlib/network.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mqtt.dir/mqttlib/network.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/mqtt.dir/mqttlib/network.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/mqttlib/network.c.o   -c /home/pi/Desktop/tmp/mqttlib/network.c
 
 CMakeFiles/mqtt.dir/mqttlib/network.c.i: cmake_force
@@ -98,19 +111,21 @@ CMakeFiles/mqtt.dir/mqttlib/network.c.s: cmake_force
 
 # Object files for target mqtt
 mqtt_OBJECTS = \
-"CMakeFiles/mqtt.dir/mqtt_client.c.o" \
+"CMakeFiles/mqtt.dir/main.c.o" \
 "CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o" \
+"CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o" \
 "CMakeFiles/mqtt.dir/mqttlib/network.c.o"
 
 # External object files for target mqtt
 mqtt_EXTERNAL_OBJECTS =
 
-mqtt: CMakeFiles/mqtt.dir/mqtt_client.c.o
+mqtt: CMakeFiles/mqtt.dir/main.c.o
 mqtt: CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o
+mqtt: CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o
 mqtt: CMakeFiles/mqtt.dir/mqttlib/network.c.o
 mqtt: CMakeFiles/mqtt.dir/build.make
 mqtt: CMakeFiles/mqtt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable mqtt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable mqtt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mqtt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
