@@ -1,1 +1,1 @@
-/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/mqtt.dir/main.c.o CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o CMakeFiles/mqtt.dir/mqttlib/network.c.o  -o mqtt 
+/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/mqtt.dir/mqtt_client.c.o CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o CMakeFiles/mqtt.dir/mqttlib/network.c.o  -o mqtt 

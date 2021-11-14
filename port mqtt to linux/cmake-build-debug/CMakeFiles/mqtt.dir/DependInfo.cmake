@@ -4,9 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pi/Desktop/tmp/main.c" "/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/mqtt.dir/main.c.o"
+  "/home/pi/Desktop/tmp/mqtt_client.c" "/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/mqtt.dir/mqtt_client.c.o"
   "/home/pi/Desktop/tmp/mqttlib/mqtt.c" "/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/mqtt.dir/mqttlib/mqtt.c.o"
-  "/home/pi/Desktop/tmp/mqttlib/mqtt_client.c" "/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o"
   "/home/pi/Desktop/tmp/mqttlib/network.c" "/home/pi/Desktop/tmp/cmake-build-debug/CMakeFiles/mqtt.dir/mqttlib/network.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

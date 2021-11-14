@@ -33,8 +33,8 @@ typedef err_t (*network_tcp_connected_fn)(void *arg, struct altcp_pcb *conn, err
 typedef err_t (*network_tcp_recv_fn)(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err);
 typedef err_t (*network_tcp_sent_fn)(void *arg, struct altcp_pcb *conn, u16_t len);
 typedef err_t (*network_tcp_poll_fn)(void *arg, struct altcp_pcb *conn);
-typedef err_t (*network_read_fn) (struct altcp_pcb*,unsigned char*,int);
-typedef err_t (*network_write_fn) (struct altcp_pcb*, unsigned char*, int);
+typedef err_t (*network_read_fn) (struct altcp_pcb *tpcb, struct pbuf* buf, int len);
+typedef err_t (*network_write_fn) (struct altcp_pcb *tpcb, u8_t* buffer, int len);
 typedef void (*network_timeout_handler)(void *arg);
 
  struct altcp_pcb{

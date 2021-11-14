@@ -15,7 +15,7 @@
 #define username "eth123123&gft7mcQNNGo"
 #define password "bb9ef4dd7395791fd2b7a435fa95815b6971cb2e"
 
-
+extern mqtt_client_t static_client;
 
 
 void example_do_connect(mqtt_client_t *client,unsigned char a,unsigned char b,unsigned char c,unsigned char d);

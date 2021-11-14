@@ -123,32 +123,32 @@ mqtt/fast:
 	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/build
 .PHONY : mqtt/fast
 
-main.o: main.c.o
+mqtt_client.o: mqtt_client.c.o
 
-.PHONY : main.o
+.PHONY : mqtt_client.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/main.c.o
-.PHONY : main.c.o
+mqtt_client.c.o:
+	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/mqtt_client.c.o
+.PHONY : mqtt_client.c.o
 
-main.i: main.c.i
+mqtt_client.i: mqtt_client.c.i
 
-.PHONY : main.i
+.PHONY : mqtt_client.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/main.c.i
-.PHONY : main.c.i
+mqtt_client.c.i:
+	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/mqtt_client.c.i
+.PHONY : mqtt_client.c.i
 
-main.s: main.c.s
+mqtt_client.s: mqtt_client.c.s
 
-.PHONY : main.s
+.PHONY : mqtt_client.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/main.c.s
-.PHONY : main.c.s
+mqtt_client.c.s:
+	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/mqtt_client.c.s
+.PHONY : mqtt_client.c.s
 
 mqttlib/mqtt.o: mqttlib/mqtt.c.o
 
@@ -176,33 +176,6 @@ mqttlib/mqtt.s: mqttlib/mqtt.c.s
 mqttlib/mqtt.c.s:
 	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/mqttlib/mqtt.c.s
 .PHONY : mqttlib/mqtt.c.s
-
-mqttlib/mqtt_client.o: mqttlib/mqtt_client.c.o
-
-.PHONY : mqttlib/mqtt_client.o
-
-# target to build an object file
-mqttlib/mqtt_client.c.o:
-	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.o
-.PHONY : mqttlib/mqtt_client.c.o
-
-mqttlib/mqtt_client.i: mqttlib/mqtt_client.c.i
-
-.PHONY : mqttlib/mqtt_client.i
-
-# target to preprocess a source file
-mqttlib/mqtt_client.c.i:
-	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.i
-.PHONY : mqttlib/mqtt_client.c.i
-
-mqttlib/mqtt_client.s: mqttlib/mqtt_client.c.s
-
-.PHONY : mqttlib/mqtt_client.s
-
-# target to generate assembly for a file
-mqttlib/mqtt_client.c.s:
-	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/mqttlib/mqtt_client.c.s
-.PHONY : mqttlib/mqtt_client.c.s
 
 mqttlib/network.o: mqttlib/network.c.o
 
@@ -240,15 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... mqtt"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... mqtt_client.o"
+	@echo "... mqtt_client.i"
+	@echo "... mqtt_client.s"
 	@echo "... mqttlib/mqtt.o"
 	@echo "... mqttlib/mqtt.i"
 	@echo "... mqttlib/mqtt.s"
-	@echo "... mqttlib/mqtt_client.o"
-	@echo "... mqttlib/mqtt_client.i"
-	@echo "... mqttlib/mqtt_client.s"
 	@echo "... mqttlib/network.o"
 	@echo "... mqttlib/network.i"
 	@echo "... mqttlib/network.s"

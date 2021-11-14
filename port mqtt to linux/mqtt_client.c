@@ -4,7 +4,7 @@
 
 mqtt_client_t static_client;
 int main(){
-    network_init((struct altcp_pcb *)static_client.conn);
+    //network_init((struct altcp_pcb *)static_client.conn);
     example_do_connect(&static_client,MQTT_SERVER_IP);
 
     while (1){
@@ -22,14 +22,10 @@ void example_do_connect(mqtt_client_t *client,unsigned char a,unsigned char b,un
   /* Setup an empty client info structure */
 #endif
 #if USE_SOCKET
-    u8_t ip[4];
-    ip[0]=a;
-    ip[1]=b;
-    ip[2]=c;
-    ip[3]=d;
+
     ip_addr_t ip_addr;
-    ip_addr.addr= inet_addr(ip);
-    printf("%d",ip_addr.addr);
+    ip_addr.addr= inet_addr("192.168.10.160");
+    printf("%d",&ip_addr.addr);
 #endif
     memset(&ci, 0, sizeof(ci));
 

@@ -64,7 +64,7 @@ typedef void (*mqtt_connection_cb_t)(mqtt_client_t *client, void *arg, mqtt_conn
 #include <netinet/tcp.h>
 #include <sys/param.h>
 #include <netdb.h>
-
+#include "mqtt_client.h"
 
 #endif
 

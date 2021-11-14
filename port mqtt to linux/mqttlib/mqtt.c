@@ -165,15 +165,16 @@ mqtt_output_send(struct mqtt_ringbuf_t *rb, struct altcp_pcb *tpcb)
     err_t err;
     u8_t wrap = 0;
     u16_t ringbuf_lin_len = mqtt_ringbuf_linear_read_length(rb);
-    struct mqtt_ringbuf_t* send_ringbuf;
 
-    send_ringbuf->get=0;
-    send_ringbuf->put=0;
     if ( ringbuf_lin_len == 0) {
         return;
     }
     wrap = (mqtt_ringbuf_len(rb) > ringbuf_lin_len);
     if(wrap){
+        struct mqtt_ringbuf_t* send_ringbuf= calloc(1,sizeof (struct mqtt_ringbuf_t));
+
+        send_ringbuf->get=0;
+        send_ringbuf->put=0;
         memcpy(&(send_ringbuf->buf)[send_ringbuf->get],&(rb->buf)[rb->get],ringbuf_lin_len);
         send_ringbuf->put=ringbuf_lin_len;
         mqtt_ringbuf_advance_get_idx(rb, ringbuf_lin_len);
@@ -358,7 +359,7 @@ mqtt_clear_requests(struct mqtt_request_t **tail)
  * @param r_objs_len Number of array entries
  */
 static void
-mqtt_init_requests(struct mqtt_request_t *r_objs, size_t r_objs_len)
+mqtt_init_requests(struct mqtt_request_t *r_objs, u32_t r_objs_len)
 {
     u8_t n;
     //LWIP_ASSERT("mqtt_init_requests: r_objs != NULL", r_objs != NULL);
@@ -508,12 +509,18 @@ mqtt_cyclic_timer(void *arg)
     u8_t restart_timer = 1;
     mqtt_client_t *client = (mqtt_client_t *)arg;
     // LWIP_ASSERT("mqtt_cyclic_timer: client != NULL", client != NULL);
-
+#if USE_SOCKET
+    if(client!=&static_client||arg!=&static_client) {
+        client=&static_client;
+        arg=&static_client;
+    }
+#endif
     if (client->conn_state == MQTT_CONNECTING) {
         client->cyclic_tick++;
         if ((client->cyclic_tick * MQTT_CYCLIC_TIMER_INTERVAL) >= MQTT_CONNECT_TIMOUT) {
             // LWIP_DEBUGF(MQTT_DEBUG_TRACE, ("mqtt_cyclic_timer: CONNECT attempt to server timed out\n"));
             /* Disconnect TCP */
+            printf("mqtt_cyclic_timer: CONNECT attempt to server timed out\n");
             mqtt_close(client, MQTT_CONNECT_TIMEOUT);
             restart_timer = 0;
         }
@@ -528,6 +535,7 @@ mqtt_cyclic_timer(void *arg)
             /* If reception from server has been idle for 1.5*keep_alive time, server is considered unresponsive */
             if ((client->server_watchdog * MQTT_CYCLIC_TIMER_INTERVAL) > (client->keep_alive + client->keep_alive / 2)) {
                 //LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_cyclic_timer: Server incoming keep-alive timeout\n"));
+                printf("mqtt_cyclic_timer: Server incoming keep-alive timeout\\n");
                 mqtt_close(client, MQTT_CONNECT_TIMEOUT);
                 restart_timer = 0;
             }
@@ -1247,7 +1255,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     client->connect_arg = arg;
     client->connect_cb = cb;
     client->keep_alive = client_info->keep_alive;
-    mqtt_init_requests(client->req_list, sizeof(client->req_list));
+    mqtt_init_requests(client->req_list, 4);
 
     /* Build connect message */
     if (client_info->will_topic != NULL && client_info->will_msg != NULL) {
@@ -1312,11 +1320,15 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
 #if USE_LWIP
         client->conn = altcp_tcp_new_ip_type(IP_GET_TYPE(ip_addr));
 #elif USE_SOCKET
+        client->conn= calloc(1,sizeof(struct altcp_pcb));
+        client->conn->timer= calloc(1,sizeof(Timer));
         client->conn->sockfd = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
-        if(client->conn<0){
+        if(client->conn->sockfd<0){
             printf("network error! can not create socket!\n");
             goto tcp_fail;
         }
+        client->conn->write_fn=network_write;
+        client->conn->read_fn=network_read;
 #endif
     }
     if (client->conn == NULL) {
@@ -1327,7 +1339,9 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     /* Set arg pointer for callbacks */
     altcp_arg(client->conn, client);
     /* Any local address, pick random local port number */
-    err = altcp_bind(client->conn, ip_addr, port);
+#if USE_LWIP
+    err=altcp_bind(client->conn, ip_addr, port);
+#endif
     if (err != ERR_OK) {
         //LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_client_connect: Error binding to local ip/port, %d\n", err));
         goto tcp_fail;
@@ -1344,7 +1358,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     /* Set error callback */
     altcp_err(client->conn, mqtt_tcp_err_cb);
 
-    client->conn_state = TCP_CONNECTING;
+   client->conn_state = TCP_CONNECTING;
 
     /* Append fixed header */
     mqtt_output_append_fixed_header(&client->output, MQTT_MSG_TYPE_CONNECT, 0, 0, 0, remaining_length);
@@ -1371,7 +1385,10 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     if ((flags & MQTT_CONNECT_FLAG_PASSWORD) != 0) {
         mqtt_output_append_string(&client->output, client_info->client_pass, client_pass_len);
     }
-
+#if USE_SOCKET
+    client->conn->connected_fn(client,client->conn,err);
+    client->connect_cb(client,arg,client->conn_state);
+#endif
     return ERR_OK;
 
     tcp_fail:

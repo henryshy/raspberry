@@ -74,12 +74,12 @@ clean: CMakeFiles/mqtt.dir/clean
 CMakeFiles/mqtt.dir/all:
 	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/depend
 	$(MAKE) -f CMakeFiles/mqtt.dir/build.make CMakeFiles/mqtt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=1,2,3,4,5 "Built target mqtt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles --progress-num=1,2,3,4 "Built target mqtt"
 .PHONY : CMakeFiles/mqtt.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mqtt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mqtt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles 0
 .PHONY : CMakeFiles/mqtt.dir/rule
