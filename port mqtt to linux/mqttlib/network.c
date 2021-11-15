@@ -76,7 +76,7 @@ err_t network_connect(struct altcp_pcb *tpcb, const ip_addr_t *ipaddr, u16_t por
 
         server_addr.sin_family=AF_INET;
         server_addr.sin_port= htons(1883);
-        server_addr.sin_addr.s_addr= inet_addr("192.168.10.160");
+        server_addr.sin_addr.s_addr= inet_addr("8.130.168.62");
         socklen_t server_addr_length=sizeof(server_addr);
 
         if(connect(tpcb->sockfd,(struct sockaddr*)&server_addr,server_addr_length)<0){

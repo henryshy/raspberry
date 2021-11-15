@@ -1322,6 +1322,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
 #elif USE_SOCKET
         client->conn= calloc(1,sizeof(struct altcp_pcb));
         client->conn->timer= calloc(1,sizeof(Timer));
+        client->pend_req_queue=calloc(1,sizeof (struct mqtt_ringbuf_t));
         client->conn->sockfd = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
         if(client->conn->sockfd<0){
             printf("network error! can not create socket!\n");
@@ -1386,7 +1387,9 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
         mqtt_output_append_string(&client->output, client_info->client_pass, client_pass_len);
     }
 #if USE_SOCKET
-    client->conn->connected_fn(client,client->conn,err);
+    err=client->conn->connected_fn(client,client->conn,err);
+    struct pbuf* buf= calloc(1,sizeof (struct pbuf));
+    client->conn->read_fn(client->conn,buf,MQTT_VAR_HEADER_BUFFER_LEN);
     client->connect_cb(client,arg,client->conn_state);
 #endif
     return ERR_OK;
