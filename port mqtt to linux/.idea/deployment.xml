@@ -8,10 +8,10 @@
             <mapping deploy="/Desktop/tmp" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspberry" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspberry" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspberry" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspberry" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
         </serverdata>

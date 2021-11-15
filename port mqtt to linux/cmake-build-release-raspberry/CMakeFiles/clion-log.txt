@@ -1,4 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/pi/Desktop/tmp
--- Configuring done
--- Generating done
--- Build files have been written to: /home/pi/Desktop/tmp/cmake-build-release-raspberry

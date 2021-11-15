@@ -1,3 +1,0 @@
-/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/rebuild_cache.dir
-/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/mqtt.dir
-/home/pi/Desktop/tmp/cmake-build-release-raspberry/CMakeFiles/edit_cache.dir
