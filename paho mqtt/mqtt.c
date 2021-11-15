@@ -58,7 +58,7 @@ int main(int argc, char** argv)
 
 	Network n;
 	MQTTClient c;
-	char *host = "8.130.168.62";
+	char *host = "192.168.10.160";
 	short port = 1883;
 
 	const char *subTopic = "/"EXAMPLE_PRODUCT_KEY"/"EXAMPLE_DEVICE_NAME"/user/get";
@@ -102,9 +102,9 @@ int main(int argc, char** argv)
 	rc = MQTTConnect(&c, &data);
 	printf("MQTTConnect %d, Connect aliyun IoT Cloud Success!\n", rc);
     
-    printf("Subscribing to %s\n", subTopic);
-	rc = MQTTSubscribe(&c, subTopic, 1, messageArrived);
-	printf("MQTTSubscribe %d\n", rc);
+   // printf("Subscribing to %s\n", subTopic);
+	//rc = MQTTSubscribe(&c, subTopic, 1, messageArrived);
+	//printf("MQTTSubscribe %d\n", rc);
 
 	int cnt = 0;
     unsigned int msgid = 0;

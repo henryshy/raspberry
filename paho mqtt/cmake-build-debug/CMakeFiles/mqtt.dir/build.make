@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Desktop
+CMAKE_SOURCE_DIR = /home/pi/tmp/tmp.rakLa71lU2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Desktop/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mqtt.dir/depend.make
@@ -57,31 +57,210 @@ include CMakeFiles/mqtt.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mqtt.dir/flags.make
 
-CMakeFiles/mqtt.dir/main.c.o: CMakeFiles/mqtt.dir/flags.make
-CMakeFiles/mqtt.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mqtt.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/main.c.o   -c /home/pi/Desktop/main.c
+CMakeFiles/mqtt.dir/mqtt.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/mqtt.c.o: ../mqtt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mqtt.dir/mqtt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/mqtt.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/mqtt.c
 
-CMakeFiles/mqtt.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/Desktop/main.c > CMakeFiles/mqtt.dir/main.c.i
+CMakeFiles/mqtt.dir/mqtt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/mqtt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/mqtt.c > CMakeFiles/mqtt.dir/mqtt.c.i
 
-CMakeFiles/mqtt.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/Desktop/main.c -o CMakeFiles/mqtt.dir/main.c.s
+CMakeFiles/mqtt.dir/mqtt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/mqtt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/mqtt.c -o CMakeFiles/mqtt.dir/mqtt.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.o: ../paho_mqtt/MQTTClient.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTClient.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTClient.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTClient.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.o: ../paho_mqtt/MQTTConnectClient.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTConnectClient.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTConnectClient.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTConnectClient.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.o: ../paho_mqtt/MQTTConnectServer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTConnectServer.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTConnectServer.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTConnectServer.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.o: ../paho_mqtt/MQTTDeserializePublish.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTDeserializePublish.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTDeserializePublish.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTDeserializePublish.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.o: ../paho_mqtt/MQTTFormat.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTFormat.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTFormat.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTFormat.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.o: ../paho_mqtt/MQTTLinux.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTLinux.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTLinux.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTLinux.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.o: ../paho_mqtt/MQTTPacket.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTPacket.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTPacket.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTPacket.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.o: ../paho_mqtt/MQTTSerializePublish.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSerializePublish.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSerializePublish.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSerializePublish.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.o: ../paho_mqtt/MQTTSubscribeClient.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSubscribeClient.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSubscribeClient.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSubscribeClient.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.o: ../paho_mqtt/MQTTSubscribeServer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSubscribeServer.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSubscribeServer.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTSubscribeServer.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.o: ../paho_mqtt/MQTTUnsubscribeClient.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTUnsubscribeClient.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTUnsubscribeClient.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTUnsubscribeClient.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.s
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.o: CMakeFiles/mqtt.dir/flags.make
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.o: ../paho_mqtt/MQTTUnsubscribeServer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.o   -c /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTUnsubscribeServer.c
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTUnsubscribeServer.c > CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.i
+
+CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/tmp/tmp.rakLa71lU2/paho_mqtt/MQTTUnsubscribeServer.c -o CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.s
 
 # Object files for target mqtt
 mqtt_OBJECTS = \
-"CMakeFiles/mqtt.dir/main.c.o"
+"CMakeFiles/mqtt.dir/mqtt.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.o" \
+"CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.o"
 
 # External object files for target mqtt
 mqtt_EXTERNAL_OBJECTS =
 
-mqtt: CMakeFiles/mqtt.dir/main.c.o
+mqtt: CMakeFiles/mqtt.dir/mqtt.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTClient.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectClient.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTConnectServer.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTDeserializePublish.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTFormat.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTLinux.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTPacket.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTSerializePublish.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeClient.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTSubscribeServer.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeClient.c.o
+mqtt: CMakeFiles/mqtt.dir/paho_mqtt/MQTTUnsubscribeServer.c.o
 mqtt: CMakeFiles/mqtt.dir/build.make
-mqtt: paho_mqtt/libPAHO_MQTT.a
 mqtt: CMakeFiles/mqtt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Desktop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable mqtt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable mqtt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mqtt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -94,6 +273,6 @@ CMakeFiles/mqtt.dir/clean:
 .PHONY : CMakeFiles/mqtt.dir/clean
 
 CMakeFiles/mqtt.dir/depend:
-	cd /home/pi/Desktop/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Desktop /home/pi/Desktop /home/pi/Desktop/cmake-build-debug /home/pi/Desktop/cmake-build-debug /home/pi/Desktop/cmake-build-debug/CMakeFiles/mqtt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/tmp/tmp.rakLa71lU2 /home/pi/tmp/tmp.rakLa71lU2 /home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug /home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug /home/pi/tmp/tmp.rakLa71lU2/cmake-build-debug/CMakeFiles/mqtt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mqtt.dir/depend
 

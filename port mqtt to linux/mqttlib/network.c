@@ -76,7 +76,7 @@ err_t network_connect(struct altcp_pcb *tpcb, const ip_addr_t *ipaddr, u16_t por
 
         server_addr.sin_family=AF_INET;
         server_addr.sin_port= htons(1883);
-        server_addr.sin_addr.s_addr= inet_addr("8.130.168.62");
+        server_addr.sin_addr.s_addr= inet_addr("192.168.10.160");
         socklen_t server_addr_length=sizeof(server_addr);
 
         if(connect(tpcb->sockfd,(struct sockaddr*)&server_addr,server_addr_length)<0){
@@ -88,7 +88,7 @@ err_t network_connect(struct altcp_pcb *tpcb, const ip_addr_t *ipaddr, u16_t por
         return ERR_OK;
     }
     else{
-        printf("no network, bind fail\n");
+        printf("no network\n");
         return ERR_ARG;
     }
 }
@@ -103,8 +103,16 @@ int network_write(struct altcp_pcb *tpcb, u8_t* buffer, int len){
 }
 int network_read(struct altcp_pcb *tpcb, struct pbuf* buf, int len)
 {
-
-    int rc=recv(tpcb->sockfd,buf->payload,len,MSG_DONTWAIT);
+//    struct timeval interval = {3000 / 1000, (3000 % 1000) * 1000};
+//    if (interval.tv_sec < 0 || (interval.tv_sec == 0 && interval.tv_usec <= 0))
+//    {
+//        interval.tv_sec = 0;
+//        interval.tv_usec = 100;
+//    }
+//
+//    setsockopt(tpcb->sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&interval, sizeof(struct timeval));
+    int rc=recv(tpcb->sockfd,buf->payload,len,0);
+    buf->tot_len=rc;
     if(rc) {
         tpcb->recv_fn(tpcb->arg, tpcb, buf, ERR_OK);
     }

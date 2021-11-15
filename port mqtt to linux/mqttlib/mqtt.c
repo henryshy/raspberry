@@ -863,7 +863,7 @@ mqtt_parse_incoming(mqtt_client_t *client, struct pbuf *p)
  * @return ERR_OK or err passed into callback
  */
 static err_t
-mqtt_tcp_recv_cb(void *arg, struct altcp_pcb *pcb, struct pbuf *p, err_t err)
+ mqtt_tcp_recv_cb(void *arg, struct altcp_pcb *pcb, struct pbuf *p, err_t err)
 {
     mqtt_client_t *client = (mqtt_client_t *)arg;
     //LWIP_ASSERT("mqtt_tcp_recv_cb: client != NULL", client != NULL);
@@ -933,7 +933,9 @@ mqtt_tcp_sent_cb(void *arg, struct altcp_pcb *tpcb, u16_t len)
             mqtt_delete_request(r);
         }
         /* Try send any remaining buffers from output queue */
+#if USE_LWIP
         mqtt_output_send(&client->output, client->conn);
+#endif
     }
     return ERR_OK;
 }
@@ -1330,6 +1332,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
         }
         client->conn->write_fn=network_write;
         client->conn->read_fn=network_read;
+
 #endif
     }
     if (client->conn == NULL) {
@@ -1390,7 +1393,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
     err=client->conn->connected_fn(client,client->conn,err);
     struct pbuf* buf= calloc(1,sizeof (struct pbuf));
     client->conn->read_fn(client->conn,buf,MQTT_VAR_HEADER_BUFFER_LEN);
-    client->connect_cb(client,arg,client->conn_state);
+
 #endif
     return ERR_OK;
 

@@ -6,9 +6,10 @@ mqtt_client_t static_client;
 int main(){
     //network_init((struct altcp_pcb *)static_client.conn);
     example_do_connect(&static_client,MQTT_SERVER_IP);
-
+    struct pbuf* buf= calloc(1,sizeof (struct pbuf));
+    int rc;
     while (1){
-        MQTTYield(&static_client);
+        network_read(static_client.conn,buf,MQTT_VAR_HEADER_BUFFER_LEN);
     }
     return 0;
 }
@@ -25,7 +26,7 @@ void example_do_connect(mqtt_client_t *client,unsigned char a,unsigned char b,un
 
     ip_addr_t ip_addr;
     ip_addr.addr= inet_addr("192.168.10.160");
-    printf("%d",&ip_addr.addr);
+
 #endif
     memset(&ci, 0, sizeof(ci));
 
@@ -55,8 +56,8 @@ static void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection
         /* Setup callback for incoming publish requests */
 
         /* Subscribe to a topic named "my_stm32" with QoS level 1, call mqtt_sub_request_cb with result */
-        err = mqtt_subscribe(client, "my_stm32", 1, mqtt_sub_request_cb, "my_stm32");
-        mqtt_set_inpub_callback(client, mqtt_incoming_publish_cb, mqtt_incoming_data_cb, "my_stm32");
+        err = mqtt_subscribe(client, "my_raspberry", 0, mqtt_sub_request_cb, "my_raspberry");
+        mqtt_set_inpub_callback(client, mqtt_incoming_publish_cb, mqtt_incoming_data_cb, "my_raspberry");
         example_publish(&static_client,"new client connected");
         printf("mqtt server connected\n");
 
@@ -87,7 +88,7 @@ static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len
 {
 
     /* Decode topic string into a user defined reference */
-    if(strcmp(topic, "my_stm32") == 0) {
+    if(strcmp(topic, "my_raspberry") == 0) {
         printf("Incoming publish at topic %s with total length %u\n", (const char*)arg, (unsigned int)tot_len);
         inpub_id=1;
     }
@@ -108,7 +109,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
             printf("Incoming publish payload from %s with length %d, flags %u\n",(const char*)arg, len, (unsigned int)flags);
 
             printf("incoming data %s\n",data);
-            if(strcmp((const char*)data,"closelight") ==0){
+            if(strcmp((const char*)data,"hello") ==0){
                // GPIO_SetBits(GPIOC,GPIO_Pin_0);
                // GPIO_SetBits(GPIOC,GPIO_Pin_6);
                // GPIO_SetBits(GPIOC,GPIO_Pin_7);
@@ -137,9 +138,9 @@ void example_publish(mqtt_client_t *client, void *arg)
 {
     const char *pub_payload= arg;
     err_t err;
-    u8_t qos = 1; /* 0 1 or 2, see MQTT specification */
+    u8_t qos = 0; /* 0 1 or 2, see MQTT specification */
     u8_t retain = 0; /* No don't retain such crappy payload... */
-    err = mqtt_publish(client, "stm32_return", pub_payload, strlen(pub_payload), qos, retain, mqtt_pub_request_cb, (void *)pub_payload);
+    err = mqtt_publish(client, "raspberry_return", pub_payload, strlen(pub_payload), qos, retain, mqtt_pub_request_cb, (void *)pub_payload);
     if(err == ERR_OK){
         printf("%s\n",pub_payload);
     }

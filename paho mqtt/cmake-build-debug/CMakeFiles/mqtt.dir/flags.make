@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/pi/tmp/tmp.rakLa71lU2/paho_mqtt 
 

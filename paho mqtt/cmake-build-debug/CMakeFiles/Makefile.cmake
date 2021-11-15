@@ -11,7 +11,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
-  "../paho_mqtt/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
@@ -116,11 +115,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "paho_mqtt/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/mqtt.dir/DependInfo.cmake"
-  "paho_mqtt/CMakeFiles/PAHO_MQTT.dir/DependInfo.cmake"
   )
