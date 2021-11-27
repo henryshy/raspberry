@@ -494,8 +494,6 @@ mqtt_close(mqtt_client_t *client, mqtt_connection_status_t reason)
             client->connect_cb(client, client->connect_arg, reason);
         }
     }
-
-
 }
 
 
@@ -1312,7 +1310,7 @@ mqtt_client_connect(mqtt_client_t *client, const ip_addr_t *ip_addr, u16_t port,
         return ERR_MEM;
     }
 
-#if LWIP_ALTCP && LWIP_ALTCP_TLS
+#if LWIP_ALTCP && LWIP_ALTCP_TLS && USE_LWIP
     if (client_info->tls_config) {
     client->conn = altcp_tls_new(client_info->tls_config, IP_GET_TYPE(ip_addr));
   } else
